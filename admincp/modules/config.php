@@ -4,6 +4,8 @@
     $password = '';
     $dbname = 'trangwebbanhang';
 
+    $salt = '001ad@';
+
     $conn = mysqli_connect($server, $username, $password, $dbname);
 
     //Kiểm tra kết nối đến cơ sở dữ liệu
@@ -12,5 +14,4 @@
     }
 
     mysqli_set_charset($conn, 'UTF-8');
-
 ?>
