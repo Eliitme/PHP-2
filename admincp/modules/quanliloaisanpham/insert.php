@@ -6,7 +6,7 @@
             <td><input type="text" name="ma-loai" id="ma-loai"></td>
         </tr>
         <tr>
-            <td>Hiệu Sản Phẩm:</td>
+            <td>Loại Sản Phẩm:</td>
             <td><input type="text" name="loai-san-pham" id="loai-san-pham"></td>
         </tr>
         <tr>
