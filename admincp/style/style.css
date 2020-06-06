@@ -22,7 +22,6 @@ body {
   border: 1px solid silver;
 }
 .sidebar {
-
   list-style-type: none;
 }
 .sidebar > li {
@@ -106,26 +105,34 @@ body {
   display: block;
 }
 
-.content{
+.content {
   text-align: center;
   margin: 0 auto;
   width: 850px;
   float: right;
   position: relative;
 }
-.content-box{
+.content-box {
   position: relative;
   top: 30px;
 }
-h2{
+h2 {
   padding-bottom: 15px;
 }
 
-table.hieu-san-pham{
+table.hieu-san-pham {
   margin: auto;
   width: 450px;
 }
-table.them-hieu{
+table.them-hieu {
+  margin: auto;
+  text-align: right;
+}
+table.loai-san-pham {
+  margin: auto;
+  width: 450px;
+}
+table.loai-hieu {
   margin: auto;
   text-align: right;
 }

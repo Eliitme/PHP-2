@@ -1,5 +1,5 @@
 <h2>Quản Lí Hiệu Sản Phẩm</h2>
-<form action="modules/quanlihieusanpham/process.php" method="post" >
+<form action="modules/quanlihieusanpham/process.php" method="post" onsubmit="return formHieuSP()">
     <table class="them-hieu">
         <tr>
             <td>Mã Hiệu:</td>

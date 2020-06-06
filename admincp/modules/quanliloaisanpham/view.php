@@ -1,6 +1,6 @@
-<h2>Quản Lí Hiệu Sản Phẩm</h2>
+<h2>Quản Lí Loại Sản Phẩm</h2>
 
-<table border="1px" style="border-collapse:collapse;" class="hieu-san-pham">
+<table border="1px" style="border-collapse:collapse;" class="loai-san-pham">
     <tr>
         <td>Mã Hiệu</td>
         <td>Tên Hiệu</td>
@@ -10,7 +10,7 @@
 
     <?php
     // include('../config.php');
-    $sql = "select * from quanlihieusanpham";
+    $sql = "select * from quanliloaisanpham";
     $rs = mysqli_query($conn, $sql);
 
 
@@ -23,8 +23,8 @@
 
     ?>
         <tr>
-            <td><?php echo $each['id_hieu']; ?></td>
-            <td><?php echo $each['ten_hieu']; ?></td>
+            <td><?php echo $each['id_loai']; ?></td>
+            <td><?php echo $each['ten_loai']; ?></td>
             <td>
                 <?php
                 $tinh_trang = $each['tinh_trang'];
@@ -34,16 +34,16 @@
                 ?>
             </td>
             <td>
-                <a href="index.php?quan-li=hieu-san-pham&&thao-tac=sua&&ma-hieu=<?php echo $each['id_hieu']; ?>"><img src="../images/edit.png" alt="" width="15px">Sửa</a>
+                <a href="index.php?quan-li=loai-san-pham&&thao-tac=sua&&ma-loai=<?php echo $each['id_loai']; ?>"><img src="../images/edit.png" alt="" width="15px">Sửa</a>
             </td>
             <td>
-                <a href="index.php?quan-li=hieu-san-pham&&thao-tac=xoa-hieu&&ma-hieu=<?php echo $each['id_hieu']; ?>"><img src="../images/delete.png" alt="" width="15px">Xóa</a>
+                <a href="index.php?quan-li=loai-san-pham&&thao-tac=xoa-loai&&ma-loai=<?php echo $each['id_loai']; ?>"><img src="../images/delete.png" alt="" width="15px">Xóa</a>
             </td>
         </tr>
     <?php } ?>
     <tr>
         <td colspan="5">
-            <a href="index.php?quan-li=hieu-san-pham&&thao-tac=them-hieu"><button>Thêm Hiệu Sản Phẩm</button></a>
+            <a href="index.php?quan-li=loai-san-pham&&thao-tac=them-loai"><button>Thêm Loại Sản Phẩm</button></a>
         </td>
     </tr>
 </table>

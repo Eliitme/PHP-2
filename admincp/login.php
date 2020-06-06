@@ -50,7 +50,7 @@
         <div class="form">
             <h2>ADMINISTRATOR MANAGEMENT</h2>
             <br>
-            <form action="login.php?do=login" method="post" onsubmit="return formlogin()">
+            <form action="login.php?do=login" method="post" onsubmit="return formLogin()">
                 <input type="text" name="ten-dang-nhap" id="ten-dang-nhap" placeholder="Tên đăng nhập">
                 <br>
                 <input type="password" name="mat-khau" id="mat-khau" placeholder="Mật khẩu">

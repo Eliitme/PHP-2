@@ -1,6 +1,6 @@
 <h2>Quản Lí Hiệu Sản Phẩm</h2>
-<form action="modules/quanlihieusanpham/process.php" method="post">
-<table border="1px" style="border-collapse:collapse;">
+<form action="modules/quanlihieusanpham/process.php" method="post" onsubmit="return formHieuSP()">
+<table border="1px" style="border-collapse:collapse;" class="hieu-san-pham">
     <tr>
         <td>Mã Hiệu</td>
         <td>Tên Hiệu</td>
@@ -13,14 +13,8 @@
     $sql = "select * from quanlihieusanpham where id_hieu = '$ma_hieu'";
     $rs = mysqli_query($conn, $sql);
 
-
-    // print_r($rs);
-    // die();
-    
     $each = mysqli_fetch_assoc($rs);
     if($row = mysqli_num_rows($rs)){
-        // print_r($each);
-        // die();
 
     ?>
         <tr>

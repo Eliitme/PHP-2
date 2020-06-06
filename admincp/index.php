@@ -27,6 +27,6 @@
         include('modules/content.php');
         include('modules/footer.php');
     ?>
-    
+    <script src="script/script.js"></script>
 </body>
 </html>
