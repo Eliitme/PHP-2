@@ -2,11 +2,11 @@ body {
   margin: 0 auto;
   background-color: aliceblue;
 }
+
 .container {
   margin: auto;
   width: 1200px;
-  border: 1px solid;
-  height: 900px;
+  height: auto;
   display: block;
 }
 
@@ -16,6 +16,7 @@ body {
   border: 1px solid black;
   display: block;
 }
+
 .top-header {
   width: 100%;
   text-align: right;
@@ -24,27 +25,32 @@ body {
   height: 40px;
   border: 1px solid black;
 }
+
 .mid-header {
   position: relative;
   width: 100%;
   display: flex;
 }
 
+
 .logo {
   width: 400px;
   height: 140px;
   border: 1px solid violet;
 }
+
 .search-box {
   width: 400px;
   height: 140px;
   border: 1px solid violet;
 }
+
 .banner {
   width: 400px;
   height: 140px;
   border: 1px solid violet;
 }
+
 #menu-ngang {
   margin: 10px auto;
   width: 1200px;
@@ -52,16 +58,18 @@ body {
   line-height: 40px;
   background: #34495e;
 }
+
 #menu-ngang > ul {
-  
   margin: auto 10px;
   padding: 0px;
   list-style-type: none;
 }
+
 #menu-ngang ul.menu {
   justify-content: right;
   width: 800px;
 }
+
 #menu-ngang ul.menu > li {
   margin: 0;
   min-width: 100px;
@@ -73,6 +81,7 @@ body {
   background-color: #34495e;
   border-right: 1px #9da9b5 solid;
 }
+
 #menu-ngang > ul > li a {
   margin: 0;
   width: 100%;
@@ -81,12 +90,14 @@ body {
   display: block;
 }
 
+
 #menu-ngang ul.right {
   float: right;
   background: #34495e;
   width: 400px;
   justify-content: center;
 }
+
 #menu-ngang ul.right > li {
   margin: 0;
   margin-left: 15px;
@@ -98,6 +109,7 @@ body {
   float: right;
   background-color: #34495e;
 }
+
 #sub-menu {
   list-style-type: none;
   width: 100%;
@@ -106,23 +118,80 @@ body {
   visibility: hidden;
   z-index: 1;
 }
+
 li:hover ul#sub-menu {
   opacity: 1;
   visibility: visible;
 }
+
 #sub-menu li {
   float: none;
   width: 100%;
 }
+
 #sub-menu a:hover {
   border: 1px solid silver;
   background-color: teal;
 }
+
 #sub-menu a {
   background-color: #9da9b5;
 }
+
 .right ul,
 .right li {
   margin: 0;
   padding: 0;
+}
+
+#sidebar {
+  float: left;
+  width: 20%;
+  position: relative;
+}
+#sidebar .top-sidebar, #sidebar .bottom-sidebar{
+  border: 1px solid #cccccc;
+}
+#sidebar .top-sidebar li {
+  border: none;
+  padding: 10px;
+  line-height: 30px;
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+}
+
+#sidebar .top-sidebar ul, #sidebar .bottom-sidebar ul {
+  padding: 0;
+  list-style: none;
+  margin: 0px;
+  width: 100%;
+}
+
+.top-sidebar ul li, .bottom-sidebar ul li {
+  border-bottom: 1px solid #cccccc;
+  border-top: 1px solid #cccccc;
+
+}
+
+.top-sidebar ul li a, .bottom-sidebar ul li a {
+  text-decoration: none;
+  padding: 20px 10px;
+  width: 100%;
+  display: block;
+}
+
+.top-sidebar, .bottom-sidebar{
+  position: relative;
+  top: 20px;
+  margin-bottom: 30px;
+}
+
+.content{
+  position: relative;
+  margin-left: 20px;
+  top: 20px;
+  border: 1px solid black;
+  float: right;
+  width: 78%;
+  display: block;
 }
