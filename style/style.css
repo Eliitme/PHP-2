@@ -1,9 +1,9 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0 auto;
   background-color: aliceblue;
 }
 .container {
+  margin: auto;
   width: 1200px;
   border: 1px solid;
   height: 900px;
@@ -17,14 +17,12 @@ body {
   display: block;
 }
 .top-header {
-  float: right;
   width: 100%;
   text-align: right;
   position: relative;
   font-size: 12px;
   height: 40px;
   border: 1px solid black;
-  padding-right: 10px;
 }
 .mid-header {
   position: relative;
@@ -48,55 +46,83 @@ body {
   border: 1px solid violet;
 }
 #menu-ngang {
-	margin: 0px auto;
-	width: 1200px;
-	height: 40px;
-    line-height: 40px;
-    background: #34495e;
+  margin: 10px auto;
+  width: 1200px;
+  height: 50px;
+  line-height: 40px;
+  background: #34495e;
 }
-#menu-ngang >ul{
-	margin: 0px;
-	padding: 0px;
-	list-style-type: none;
+#menu-ngang > ul {
+  
+  margin: auto 10px;
+  padding: 0px;
+  list-style-type: none;
 }
-#menu-ngang ul.menu{
-    justify-content: right;
-    width: 800px;
+#menu-ngang ul.menu {
+  justify-content: right;
+  width: 800px;
 }
-#menu-ngang ul.menu >li {	
-	margin: 0;
-	min-width: 100px;
-	height: 40px;
-	line-height: 40px;
-	position: relative;
-	text-align: center;
-	float: left;
-	background-color: #34495e;
-	border-right: 1px #9da9b5 solid;
+#menu-ngang ul.menu > li {
+  margin: 0;
+  min-width: 100px;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  text-align: center;
+  float: left;
+  background-color: #34495e;
+  border-right: 1px #9da9b5 solid;
 }
-#menu-ngang >ul >li a{
-	margin: 0;
-	width: 100%;
-	text-decoration: none;
-	color:#fff;
-	display:block;
-}
-
-#menu-ngang ul.right{
-    float: right;
-    background: #34495e;
-    width: 400px;
-    justify-content: center;
-}
-#menu-ngang ul.right >li {	
-	margin: 0;
-	min-width: 100px;
-	height: 40px;
-	line-height: 40px;
-	position: relative;
-	text-align: center;
-	float: right;
-	background-color: #34495e;
-	border-right: 1px #9da9b5 solid;
+#menu-ngang > ul > li a {
+  margin: 0;
+  width: 100%;
+  text-decoration: none;
+  color: #fff;
+  display: block;
 }
 
+#menu-ngang ul.right {
+  float: right;
+  background: #34495e;
+  width: 400px;
+  justify-content: center;
+}
+#menu-ngang ul.right > li {
+  margin: 0;
+  margin-left: 15px;
+  min-width: 100px;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  text-align: center;
+  float: right;
+  background-color: #34495e;
+}
+#sub-menu {
+  list-style-type: none;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+}
+li:hover ul#sub-menu {
+  opacity: 1;
+  visibility: visible;
+}
+#sub-menu li {
+  float: none;
+  width: 100%;
+}
+#sub-menu a:hover {
+  border: 1px solid silver;
+  background-color: teal;
+}
+#sub-menu a {
+  background-color: #9da9b5;
+}
+.right ul,
+.right li {
+  margin: 0;
+  padding: 0;
+}
