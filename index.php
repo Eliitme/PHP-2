@@ -16,8 +16,14 @@
         include('admincp/modules/config.php');
         include('modules/header.php');
         include('modules/menu.php');
-        include('modules/sidebar.php');
-        include('modules/content.php');
+        ?>
+        <div class="container-content">
+            <?php
+            include('modules/sidebar.php');
+            include('modules/content.php');
+            ?>
+        </div>
+        <?php
         include('modules/footer.php');
         ?>
     </div>

@@ -3,16 +3,16 @@
     <table class="them-hieu">
         <tr>
             <td>Mã Hiệu:</td>
-            <td><input type="text" name="ma-hieu" id="ma-hieu"></td>
+            <td><input type="text" name="ma_hieu" id="ma_hieu"></td>
         </tr>
         <tr>
             <td>Hiệu Sản Phẩm:</td>
-            <td><input type="text" name="hieu-san-pham" id="hieu-san-pham"></td>
+            <td><input type="text" name="hieu_san_pham" id="hieu_san_pham"></td>
         </tr>
         <tr>
             <td>Tình trạng:</td>
             <td>
-                <select name="tinh-trang" id="tinh-trang" style="width: 100%;">
+                <select name="tinh_trang" id="tinh_trang" style="width: 100%;">
                     <option value="0">Không Kích Hoạt</option>
                     <option value="1">Kích Hoạt</option>
                 </select>
@@ -20,8 +20,8 @@
         </tr>
         <tr>
             <td></td>
-            <td><button type="submit" name="them-hieu" style="width: 100%;">Thêm Hiệu Sản Phẩm</button></td>
+            <td><button type="submit" name="them_hieu" style="width: 100%;">Thêm Hiệu Sản Phẩm</button></td>
         </tr>
     </table>
 </form>
-<a href="index.php?quan-li=hieu-san-pham&&thao-tac=xem-tat-ca"><button style="width: 150px; height: 50px;">Xem tất Cả</button></a>
+<a href="index.php?quan_li=hieu_san_pham&&thao_tac=xem_tat_ca"><button style="width: 150px; height: 50px;">Xem tất Cả</button></a>

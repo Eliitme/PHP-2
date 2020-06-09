@@ -34,16 +34,16 @@
                 ?>
             </td>
             <td>
-                <a href="index.php?quan-li=hieu-san-pham&&thao-tac=sua&&ma-hieu=<?php echo $each['id_hieu']; ?>"><img src="../images/edit.png" alt="" width="15px">Sửa</a>
+                <a href="index.php?quan_li=hieu_san_pham&&thao_tac=sua&&ma_hieu=<?php echo $each['id_hieu']; ?>"><img src="../images/edit.png" alt="" width="15px">Sửa</a>
             </td>
             <td>
-                <a href="index.php?quan-li=hieu-san-pham&&thao-tac=xoa-hieu&&ma-hieu=<?php echo $each['id_hieu']; ?>"><img src="../images/delete.png" alt="" width="15px">Xóa</a>
+                <a href="index.php?quan_li=hieu_san_pham&&thao_tac=xoa_hieu&&ma_hieu=<?php echo $each['id_hieu']; ?>" onclick="confirm('Bạn có muốn xóa trường hợp này không?')"><img src="../images/delete.png" alt="" width="15px">Xóa</a>
             </td>
         </tr>
     <?php } ?>
     <tr>
         <td colspan="5">
-            <a href="index.php?quan-li=hieu-san-pham&&thao-tac=them-hieu"><button>Thêm Hiệu Sản Phẩm</button></a>
+            <a href="index.php?quan_li=hieu_san_pham&&thao_tac=them_hieu"><button>Thêm Hiệu Sản Phẩm</button></a>
         </td>
     </tr>
 </table>

@@ -9,6 +9,7 @@ body {
   height: auto;
   display: block;
 }
+/* Đây là header */
 
 .header {
   width: 1200px;
@@ -32,7 +33,6 @@ body {
   display: flex;
 }
 
-
 .logo {
   width: 400px;
   height: 140px;
@@ -50,6 +50,8 @@ body {
   height: 140px;
   border: 1px solid violet;
 }
+
+/* Đây là Menu */
 
 #menu-ngang {
   margin: 10px auto;
@@ -89,7 +91,6 @@ body {
   color: #fff;
   display: block;
 }
-
 
 #menu-ngang ul.right {
   float: right;
@@ -144,14 +145,29 @@ li:hover ul#sub-menu {
   padding: 0;
 }
 
+/* Đã xong */
+/* Content + Sidebar */
+
+.container-content {
+  width: 100%;
+  display: block;
+  position: relative;
+  top: 20px;
+}
+
 #sidebar {
   float: left;
   width: 20%;
   position: relative;
+  height: auto;
 }
-#sidebar .top-sidebar, #sidebar .bottom-sidebar{
+
+#sidebar .top-sidebar,
+#sidebar .mid-sidebar,
+#sidebar .bottom-sidebar {
   border: 1px solid #cccccc;
 }
+
 #sidebar .top-sidebar li {
   border: none;
   padding: 10px;
@@ -160,38 +176,88 @@ li:hover ul#sub-menu {
   border-top: 1px solid #cccccc;
 }
 
-#sidebar .top-sidebar ul, #sidebar .bottom-sidebar ul {
+#sidebar .top-sidebar ul,
+#sidebar .mid-sidebar ul {
   padding: 0;
   list-style: none;
   margin: 0px;
   width: 100%;
 }
 
-.top-sidebar ul li, .bottom-sidebar ul li {
+.top-sidebar ul li,
+.mid-sidebar ul li {
   border-bottom: 1px solid #cccccc;
   border-top: 1px solid #cccccc;
-
 }
 
-.top-sidebar ul li a, .bottom-sidebar ul li a {
+.top-sidebar ul li a,
+.mid-sidebar ul li a {
   text-decoration: none;
-  padding: 20px 10px;
+  padding-bottom: 2px;
   width: 100%;
   display: block;
 }
 
-.top-sidebar, .bottom-sidebar{
+.top-sidebar,
+.mid-sidebar,
+.bottom-sidebar {
   position: relative;
-  top: 20px;
   margin-bottom: 30px;
 }
 
-.content{
+.content {
   position: relative;
   margin-left: 20px;
-  top: 20px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   float: right;
   width: 78%;
   display: block;
+  height: auto;
+}
+
+.content-box {
+  width: 100%;
+  /* border: 1px solid black; */
+  position: relative;
+  top: 10px;
+  display: block;
+}
+
+.san-pham {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  border: 1px solid black;
+  float: left;
+  top: 30px;
+}
+
+.linh-kien-laptop {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  border: 1px solid black;
+  float: left;
+  top: 60px;
+}
+
+.footer {
+  width: 100%;
+  display: block;
+  position: relative;
+  height: auto;
+  top: 110px;
+}
+.footer .hang-san-xuat {
+  width: 100%;
+  height: 80px;
+  border: 1px solid black;
+  float: left;
+  margin-bottom: 10px;
+}
+.footer .thong-tin {
+  width: 100%;
+  height: 200px;
+  border: 1px solid black;
+  float: left;
 }

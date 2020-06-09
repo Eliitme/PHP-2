@@ -9,7 +9,7 @@
 
     <?php
     // include('../config.php');
-    $ma_hieu = $_GET['ma-hieu'];
+    $ma_hieu = $_GET['ma_hieu'];
     $sql = "select * from quanlihieusanpham where id_hieu = '$ma_hieu'";
     $rs = mysqli_query($conn, $sql);
 
@@ -18,10 +18,10 @@
 
     ?>
         <tr>
-            <td><input type="text" value="<?php echo $each['id_hieu']; ?>" name="ma-hieu" readonly></td>
-            <td><input type="text" value="<?php echo $each['ten_hieu']; ?>" name="hieu-san-pham"></td>
+            <td><input type="text" value="<?php echo $each['id_hieu']; ?>" name="ma_hieu" readonly></td>
+            <td><input type="text" value="<?php echo $each['ten_hieu']; ?>" name="hieu_san_pham"></td>
             <td>
-                <select name="tinh-trang" id="tinh-trang">
+                <select name="tinh_trang" id="tinh_trang">
                     <option value="1">Kích Hoạt</option>
                     <option value="0">Không Kích Hoạt</option>
                 </select>
@@ -29,5 +29,5 @@
         </tr>
     <?php }?>
 </table>
-<button type="submit" name="sua-hieu">Sửa</button>
+<button type="submit" name="sua_hieu">Sửa</button>
 </form>
