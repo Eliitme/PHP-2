@@ -1,6 +1,6 @@
 <h2>Quản Lí Loại Sản Phẩm</h2>
 
-<table border="1px" style="border-collapse:collapse;" class="loai-san-pham">
+<table border="1px" style="border-collapse:collapse;" class="quan-li-xem-sua">
     <tr>
         <td>Mã Loại</td>
         <td>Tên Loại</td>
@@ -10,17 +10,11 @@
     </tr>
 
     <?php
-    // include('../config.php');
+
     $sql = "select id_loai, ten_loai, ten_hieu, quanliloaisanpham.tinh_trang as tinh_trang from quanliloaisanpham join quanlihieusanpham on quanlihieusanpham.id_hieu = quanliloaisanpham.id_hieu";
     $rs = mysqli_query($conn, $sql);
 
-
-    // print_r($each);
-    // die();
-
     while ($each = mysqli_fetch_assoc($rs)) {
-        // echo $row;
-        // die();
 
     ?>
         <tr>

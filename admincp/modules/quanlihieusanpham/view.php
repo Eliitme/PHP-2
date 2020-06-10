@@ -1,6 +1,6 @@
 <h2>Quản Lí Hiệu Sản Phẩm</h2>
 
-<table border="1px" style="border-collapse:collapse;" class="hieu-san-pham">
+<table border="1px" style="border-collapse:collapse;" class="quan-li-xem-sua">
     <tr>
         <td>Mã Hiệu</td>
         <td>Tên Hiệu</td>

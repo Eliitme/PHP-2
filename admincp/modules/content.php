@@ -49,6 +49,26 @@
                         break;
                 }
                 break;
+            case 'san_pham':
+                switch ($thao_tac) {
+                    case 'them_san_pham':
+                        require_once('modules/quanlisanpham/insert.php');
+                        break;
+                    case 'xem_tat_ca':
+                        require_once('modules/quanlisanpham/view.php');
+                        break;
+                    case 'sua':
+                        require_once('modules/quanlisanpham/update.php');
+                        break;
+                    case 'xoa_san_pham':
+                        require_once('modules/quanlisanpham/delete.php');
+                        break;
+
+                    default:
+                        # code...
+                        require_once('modules/quanlisanpham/view.php');
+                        break;
+                }
             default:
                 # code...
 

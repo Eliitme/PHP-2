@@ -10,7 +10,7 @@
 
 <body>
     <form action="" method="post" enctype="multipart/form_data">
-        <!__ <input type="file" name="upload" id=""> __>
+        <!-- <input type="file" name="upload" id=""> -->
         <textarea name="texteditor" id="texteditor" cols="30" rows="10"></textarea>
         <script>
             CKEDITOR.replace('texteditor',{

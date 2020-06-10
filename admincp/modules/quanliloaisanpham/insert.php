@@ -1,6 +1,6 @@
 <h2>Quản Lí Loại Sản Phẩm</h2>
 <form action="modules/quanliloaisanpham/process.php" method="post">
-    <table class="them-hieu">
+    <table class="quan-li">
         <tr>
             <td>Mã Loại:</td>
             <td><input type="text" name="ma_loai" id="ma_loai"></td>
@@ -12,7 +12,7 @@
         <tr>
             <td>Hiệu Sản Phẩm:</td>
             <td>
-                <select name="ma_hieu" id="ma_hieu">
+                <select name="ma_hieu" id="ma_hieu" style="width: 100%;">
                     <?php
                     $sql = "select * from quanlihieusanpham where tinh_trang = 1";
                     $rs = mysqli_query($conn, $sql);

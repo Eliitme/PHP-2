@@ -4,7 +4,7 @@
 }
 body {
   margin: auto;
-  width: 1200px;
+  width: 1400px;
   font-family: Arial, san-serif;
   display: flexbox;
 }
@@ -15,7 +15,7 @@ body {
 }
 .sidebar-nav {
   text-align: center;
-  width: 340px;
+  width: 25%;
   height: 400px;
   float: left;
   position: relative;
@@ -57,9 +57,9 @@ body {
 }
 
 .menu-nav {
-  width: 850px;
+  width: 74%;
   height: 50px;
-  float: left;
+  float: right;
   background-color: slateblue;
   position: relative;
   border: 1px solid silver;
@@ -108,31 +108,30 @@ body {
 .content {
   text-align: center;
   margin: 0 auto;
-  width: 850px;
+  width: 74%;
+  align-items: center;
   float: right;
   position: relative;
 }
 .content-box {
+  width: 100%;
   position: relative;
+  
   top: 30px;
 }
 h2 {
   padding-bottom: 15px;
 }
 
-table.hieu-san-pham {
-  margin: auto;
-  width: 450px;
-}
-table.them-hieu {
+table.quan-li {
   margin: auto;
   text-align: right;
 }
-table.loai-san-pham {
+table.quan-li-xem-sua {
   margin: auto;
-  width: 450px;
+  width: 100%;
 }
-table.loai-hieu {
-  margin: auto;
-  text-align: right;
+
+input[type = text]{
+  width: 98%;
 }
