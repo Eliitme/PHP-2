@@ -2,11 +2,11 @@
     <div class="top-sidebar">
         <h4>DANH MỤC</h4>
         <ul>
+            <li><a href="">Laptop Mới</a></li>
             <li><a href="">Laptop Cũ</a></li>
             <li><a href="">Linh Kiện Laptop</a></li>
             <li><a href="">Dịch Vụ Chăm Sóc Laptop</a></li>
             <li><a href="">Hướng Dẫn Mua Hàng</a></li>
-            <li><a href="">Đang cập nhật</a></li>
         </ul>
     </div>
     <div class="mid-sidebar">
@@ -66,6 +66,18 @@
         </ul>
     </div>
     <div class="bottom-sidebar">
+        <h4>SẢN PHẨM</h4>
+        <ul>
+            <?php
+                $sql = "select ten_hieu, COUNT(id_san_pham) as tong_san_pham from quanlihieusanpham join quanlisanpham on quanlisanpham.id_hieu = quanlihieusanpham.id_hieu where quanlisanpham.tinh_trang = 1 GROUP by quanlihieusanpham.id_hieu";
+                $rs = mysqli_query($conn, $sql);
 
+                while($each = mysqli_fetch_array($rs)){
+                    ?>
+                    <li><a href=""><?php echo $each['ten_hieu'] ?>(<?php echo $each['tong_san_pham'] ?></a></li>
+                    <?php
+                }
+            ?>
+        </ul>
     </div>
 </div>

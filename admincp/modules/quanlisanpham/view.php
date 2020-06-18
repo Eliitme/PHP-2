@@ -2,7 +2,6 @@
 
 <table border="1px" style="border-collapse:collapse;" class="quan-li-xem-sua">
     <tr>
-        <td>Mã Sản Phẩm</td>
         <td>Tên Sản Phẩm</td>
         <td>Ảnh Sản Phẩm</td>
         <td>Hiệu Sản Phẩm</td>
@@ -22,7 +21,6 @@
     while ($each = mysqli_fetch_array($rs)) {
     ?>
         <tr>
-            <td><?php echo $each['id_san_pham'] ?></td>
             <td><?php echo $each['ten_san_pham'] ?></td>
             <td><img src="modules/quanlisanpham/<?php echo $each['anh_san_pham'] ?>" alt="" height="150px"></td>
             <td><?php echo $each['ten_hieu'] ?></td>
@@ -51,7 +49,7 @@
     }
     ?>
     <tr>
-        <td colspan="11">
+        <td colspan="10">
             <a href="index.php?quan_li=san_pham&&thao_tac=them_san_pham"><button>Thêm Sản Phẩm</button></a>
         </td>
     </tr>

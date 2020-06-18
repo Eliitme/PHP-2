@@ -2,7 +2,6 @@
 
 <table border="1px" style="border-collapse:collapse;" class="quan-li-xem-sua">
     <tr>
-        <td>Mã Loại</td>
         <td>Tên Loại</td>
         <td>Tên Hiệu</td>
         <td>Tình Trạng</td>
@@ -18,7 +17,6 @@
 
     ?>
         <tr>
-            <td><?php echo $each['id_loai']; ?></td>
             <td><?php echo $each['ten_loai']; ?></td>
             <td><?php echo $each['ten_hieu']?></td>
             <td>
@@ -38,7 +36,7 @@
         </tr>
     <?php } ?>
     <tr>
-        <td colspan="6">
+        <td colspan="5">
             <a href="index.php?quan_li=loai_san_pham&&thao_tac=them_loai"><button>Thêm Loại Sản Phẩm</button></a>
         </td>
     </tr>

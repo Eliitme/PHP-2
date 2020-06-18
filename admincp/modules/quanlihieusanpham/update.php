@@ -2,12 +2,12 @@
 <form action="modules/quanlihieusanpham/process.php" method="post" onsubmit="return formHieuSP()">
 <table border="1px" style="border-collapse:collapse;" class="hieu-san-pham">
     <tr>
-        <td>Mã Hiệu</td>
         <td>Tên Hiệu</td>
         <td>Tình Trạng</td>
     </tr>
 
     <?php
+
     // include('../config.php');
     $ma_hieu = $_GET['ma_hieu'];
     $sql = "select * from quanlihieusanpham where id_hieu = '$ma_hieu'";
@@ -18,8 +18,10 @@
 
     ?>
         <tr>
-            <td><input type="text" value="<?php echo $each['id_hieu']; ?>" name="ma_hieu" readonly></td>
-            <td><input type="text" value="<?php echo $each['ten_hieu']; ?>" name="hieu_san_pham"></td>
+            <td>
+            <input type="hidden" value="<?php echo $each['id_hieu']; ?>" name="ma_hieu">
+                <input type="text" value="<?php echo $each['ten_hieu']; ?>" name="hieu_san_pham">
+            </td>
             <td>
                 <select name="tinh_trang" id="tinh_trang">
                     <option value="1">Kích Hoạt</option>

@@ -17,6 +17,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Quản Trị</title>
     <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+    <script src="script/ckeditor/ckeditor.js"></script>
 </head>
 <body>
     <?php
@@ -27,6 +29,6 @@
         include('modules/content.php');
         include('modules/footer.php');
     ?>
-    <script src="script/script.js"></script>
+    
 </body>
 </html>

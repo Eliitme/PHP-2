@@ -15,7 +15,7 @@
         $mat_khau = md5(($_POST['mat-khau']));
 
         //Kiểm tra tên đăng nhập
-        $sql = "select id_admin, ten_dang_nhap, mat_khau from admin where ten_dang_nhap = '$ten_dang_nhap'";
+        $sql = "select id_admin, ten_dang_nhap, mat_khau, cap_do from admin where ten_dang_nhap = '$ten_dang_nhap'";
         $result = mysqli_query($conn, $sql);
 
         if(mysqli_num_rows($result) == 0){
@@ -24,12 +24,13 @@
         }
         $row = mysqli_fetch_array($result);
         
-        if($mat_khau.md5($salt) != md5($row['mat_khau']).md5($salt)){
+        if(md5($mat_khau.md5($salt)) != md5(md5($row['mat_khau']).md5($salt))){
             echo "<script>alert('Tên đăng nhập hoặc mật khẩu không chính xác'); history.go(-1);</script>";
             exit;
         }
         $_SESSION['dang-nhap'] = $ten_dang_nhap;
-        $_SESSION['dang-nhap'] = $row['id_admin'];
+        $_SESSION['id_admin'] = $row['id_admin'];
+        $_SESSION['cap_do'] = $row['cap_do'];
         echo "<script>alert('Bạn đã đăng nhập với tài khoản ".$ten_dang_nhap."'); window.location.replace('index.php')</script>";
         die();
     }

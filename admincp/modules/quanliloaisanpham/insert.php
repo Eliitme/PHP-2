@@ -2,10 +2,6 @@
 <form action="modules/quanliloaisanpham/process.php" method="post">
     <table class="quan-li">
         <tr>
-            <td>Mã Loại:</td>
-            <td><input type="text" name="ma_loai" id="ma_loai"></td>
-        </tr>
-        <tr>
             <td>Loại Sản Phẩm:</td>
             <td><input type="text" name="loai_san_pham" id="loai_san_pham"></td>
         </tr>

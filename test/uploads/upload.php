@@ -12,11 +12,11 @@ $file_name = date('dmY_'.time(), time()).".$type";
 
 $array['uploaded'] = 1;
 $array['fileName'] = $file_name;
-$array['url'] = "uploads/" . $file_name;
+$array['url'] = "../style/" . $file_name;
 $path = $array['url'];
 
 $rs = mysqli_query($conn, "insert into test1(path) values ('$path')");
-if (file_exists("uploads/" . $file_name))
+if (file_exists("/style/" . $file_name))
 {
   $array['error']['message'] = $file_name . " already exists. ";
 }

@@ -2,7 +2,6 @@
 <form action="modules/quanliloaisanpham/process.php" method="post">
     <table border="1px" style="border-collapse:collapse;" class="quan-li-xem-sua">
         <tr>
-            <td>Mã Loại</td>
             <td>Tên Loại</td>
             <td>Tên Hiệu</td>
             <td>Tình Trạng</td>
@@ -18,8 +17,11 @@
         if ($row = mysqli_num_rows($rs)) {
         ?>
             <tr>
-                <td><input type="text" value="<?php echo $each['id_loai']; ?>" name="ma_loai" readonly></td>
-                <td><input type="text" value="<?php echo $each['ten_loai']; ?>" name="loai_san_pham"></td>
+
+                <td>
+                    <input type="hidden" value="<?php echo $each['id_loai']; ?>" name="ma_loai">
+                    <input type="text" value="<?php echo $each['ten_loai']; ?>" name="loai_san_pham">
+                </td>
                 <td>
                     <select name="ma_hieu" id="ma_hieu">
                         <?php

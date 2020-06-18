@@ -2,7 +2,6 @@
 
 include('../config.php');
 
-$ma_san_pham = $_POST['ma_san_pham'];
 $ten_san_pham = $_POST['ten_san_pham'];
 $hieu_san_pham = $_POST['hieu_san_pham'];
 $loai_san_pham = $_POST['loai_san_pham'];
@@ -24,18 +23,19 @@ if (isset($_POST['them_san_pham'])) {
         echo "<script>alert('Vui lòng chọn ảnh nhỏ hơn 5M'); history.go(-1);</script>";
     }
 
-    $sql = "insert into quanlisanpham(id_san_pham, ten_san_pham, anh_san_pham, id_hieu, id_loai, gia, so_luong, tinh_trang) values
-    ('$ma_san_pham', '$ten_san_pham', '$url', '$hieu_san_pham', '$loai_san_pham', $gia_san_pham, $so_luong, $tinh_trang)";
+    $sql = "insert into quanlisanpham(ten_san_pham, anh_san_pham, id_hieu, id_loai, gia, so_luong, tinh_trang) values
+    ('$ten_san_pham', '$url', '$hieu_san_pham', '$loai_san_pham', $gia_san_pham, $so_luong, $tinh_trang)";
 
     $rs = mysqli_query($conn, $sql);
     if ($rs) {
         move_uploaded_file($_FILES['anh_san_pham']['tmp_name'], $url);
 
-        echo "<script>alert('Thêm Sản Phẩm Thành Công'); window.location.replace('../../index.php?quan_li=san_pham&&thao_tac=xem_tat_ca');</script>";
+        echo "<script>alert('Thêm Sản Phẩm Thành Công'); alert('Mời Thêm Chi Tiết Sản Phẩm'); window.location.replace('../../index.php?quan_li=san_pham&&thao_tac=them_chi_tiet&&ma_san_pham=$ma_san_pham');</script>";
     } else echo "<script>alert('Thêm Sản Phẩm Thất Bại'); history.go(-1);</script>";
 }
 
 if (isset($_POST['sua_san_pham'])) {
+    $ma_san_pham = $_POST['ma_san_pham'];
     $anh_cu = $_POST['anh_cu'];
 
     if($_FILES['anh_san_pham']['size'] > 0){
@@ -52,7 +52,7 @@ if (isset($_POST['sua_san_pham'])) {
         gia = $gia_san_pham,
         so_luong = $so_luong,
         tinh_trang = $tinh_trang     
-        where id_san_pham = '$ma_san_pham'   
+        where id_san_pham = $ma_san_pham  
         ";
     $rs = mysqli_query($conn, $sql);
     if ($rs) {

@@ -2,7 +2,6 @@
 <form action="modules/quanlisanpham/process.php" method="post" enctype="multipart/form-data">
 <table border="1px" style="border-collapse:collapse;" class="quan-li-xem-sua">
     <tr>
-        <td>Mã Sản Phẩm</td>
         <td>Tên Sản Phẩm</td>
         <td>Ảnh Sản Phẩm</td>
         <td>Hiệu Sản Phẩm</td>
@@ -21,8 +20,11 @@
     while ($each = mysqli_fetch_array($rs)) {
     ?>
         <tr>
-            <td><input type="text" name="ma_san_pham" id="ma_san_pham" value="<?php echo $each['id_san_pham'] ?>" readonly></td>
-            <td><input type="text" name="ten_san_pham" id="ten_san_pham" value="<?php echo $each['ten_san_pham'] ?>"></td>
+   
+            <td>
+            <input type="hidden" name="ma_san_pham" id="ma_san_pham" value="<?php echo $each['id_san_pham'] ?>">
+                <input type="text" name="ten_san_pham" id="ten_san_pham" value="<?php echo $each['ten_san_pham'] ?>">
+            </td>
             <td>
                 <img src="modules/quanlisanpham/<?php echo $each['anh_san_pham'] ?>" alt="" height="50px">
                 <input type="hidden" value="<?php echo $each['anh_san_pham'] ?>" name="anh_cu">

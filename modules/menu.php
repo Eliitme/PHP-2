@@ -3,7 +3,7 @@
         <li><a href="#">Trang Chủ</a></li>
         <li><a href="#">Giới Thiệu</a></li>
         <li><a href="#">Sản Phẩm</a></li>
-        <li><a href="#">Tin Tức</a></li>
+        <li><a href="tintuc/view.php">Tin Tức</a></li>
         <li><a href="#">Liên Hệ</a></li>
     </ul>
     <ul class="right">
@@ -19,16 +19,16 @@
                 $rs = mysqli_fetch_array(mysqli_query($conn, $sql));
             } ?>
             <li style="color: white;">Xin chào, <?php echo $rs['ho_va_ten'] ?>
-            <i class="fas fa-chevron-down"></i>
-            <ul id="sub-menu">
-                <li><a href="">Thông Tin Cá Nhân</a></li>
-                <li><a href="">Lịch Sử Mua Hàng</a></li>
-                <li><a href="dang_xuat.php?">Đăng Xuất</a></li>
-            </ul>
+                <i class="fas fa-chevron-down"></i>
+                <ul id="sub-menu">
+                    <li><a href="">Thông Tin Cá Nhân</a></li>
+                    <li><a href="">Lịch Sử Mua Hàng</a></li>
+                    <li><a href="dang_xuat.php?">Đăng Xuất</a></li>
+                </ul>
             </li>
-            <?php } ?> 
-            <li>
+        <?php } ?>
+        <li>
             <a href=""><i class="fas fa-shopping-cart"></i> Giỏ hàng:</a>
-            </li>
+        </li>
     </ul>
 </div>

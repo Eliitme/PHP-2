@@ -1,39 +1,38 @@
 <?php
-    //Xử lí đăng kí
-    if(isset($_POST['dang_ki'])){
-        include('modules/config.php');
-    
-        $ho_va_ten = $_POST['ho_va_ten'];
-        $ten_dang_nhap = $_POST['ten_dang_nhap'];
-        $mat_khau = md5($_POST['mat_khau']);
+//Xử lí đăng kí
+if (isset($_POST['dang_ki'])) {
+    include('modules/config.php');
 
-        //Kiểm tra tên đăng nhập đã tồn tại hay chưa
-        $sql = "select ten_dang_nhap from khachhang where ten_dang_nhap = '$ten_dang_nhap'";
-        $result = mysqli_query($conn, $sql);
+    $ho_va_ten = $_POST['ho_va_ten'];
+    $ten_dang_nhap = $_POST['ten_dang_nhap'];
+    $mat_khau = md5($_POST['mat_khau']);
 
-        if(mysqli_num_rows($result) == 1){
-            echo "<script>alert('Tài khoản đã tồn tại'); history.go(-1);</script>";
-            exit;
-        }
-        //Mã hóa mật khẩu
-        $mat_khau = md5($salt.$mat_khau);
-        $sql = "insert into khachhang(ho_va_ten, ten_dang_nhap, mat_khau) values
+    //Kiểm tra tên đăng nhập đã tồn tại hay chưa
+    $sql = "select ten_dang_nhap from khachhang where ten_dang_nhap = '$ten_dang_nhap'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) == 1) {
+        echo "<script>alert('Tài khoản đã tồn tại'); history.go(-1);</script>";
+        exit;
+    }
+    //Mã hóa mật khẩu
+    $mat_khau = md5($salt . $mat_khau);
+    $sql = "insert into khachhang(ho_va_ten, ten_dang_nhap, mat_khau) values
             ('$ho_va_ten', '$ten_dang_nhap', '$mat_khau')
         ";
-        $rs = mysqli_query($conn, $sql);
+    $rs = mysqli_query($conn, $sql);
 
-        if($rs){
-            echo "<script>alert('Bạn đã tạo tài khoản thành công'); window.location.replace('index.php')</script>";
-        } echo "<script>alert('Có lỗi xảy ra, vui lòng thử lại sau'); history.go(-1)</script>";
-        
-        
-        
+    if ($rs) {
+        echo "<script>alert('Bạn đã tạo tài khoản thành công'); window.location.replace('index.php')</script>";
     }
+    echo "<script>alert('Có lỗi xảy ra, vui lòng thử lại sau'); history.go(-1)</script>";
+}
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,6 +40,7 @@
     <link rel="stylesheet" href="style/style-log.css">
     <script src="script/script.js"></script>
 </head>
+
 <body>
     <div class="dang-nhap">
         <div class="form">
@@ -60,4 +60,5 @@
         </div>
     </div>
 </body>
+
 </html>

@@ -2,13 +2,13 @@
 
 <table border="1px" style="border-collapse:collapse;" class="quan-li-xem-sua">
     <tr>
-        <td>Mã Hiệu</td>
         <td>Tên Hiệu</td>
         <td>Tình Trạng</td>
         <td colspan="2">Quản Lí</td>
     </tr>
 
     <?php
+
     // include('../config.php');
     $sql = "select * from quanlihieusanpham";
     $rs = mysqli_query($conn, $sql);
@@ -23,7 +23,6 @@
 
     ?>
         <tr>
-            <td><?php echo $each['id_hieu']; ?></td>
             <td><?php echo $each['ten_hieu']; ?></td>
             <td>
                 <?php
@@ -42,7 +41,7 @@
         </tr>
     <?php } ?>
     <tr>
-        <td colspan="5">
+        <td colspan="4">
             <a href="index.php?quan_li=hieu_san_pham&&thao_tac=them_hieu"><button>Thêm Hiệu Sản Phẩm</button></a>
         </td>
     </tr>

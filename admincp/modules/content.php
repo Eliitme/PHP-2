@@ -63,12 +63,68 @@
                     case 'xoa_san_pham':
                         require_once('modules/quanlisanpham/delete.php');
                         break;
+                    case 'them_chi_tiet':
+                        require_once('modules/quanlisanpham/chitietsanpham/insert.php');
+                        break;
 
                     default:
                         # code...
                         require_once('modules/quanlisanpham/view.php');
                         break;
                 }
+                break;
+            case 'tin_tuc':
+                # code...
+                switch ($thao_tac) {
+                    case 'them_tin_tuc':
+                        # code...
+                        require_once('modules/quanlitintuc/insert.php');
+                        break;
+                    case 'xem_tat_ca':
+                        # code...
+                        require_once('modules/quanlitintuc/view.php');
+                        break;
+                    case 'xem_chi_tiet':
+                        require_once('modules/quanlitintuc/view_all.php');
+                        break;
+                    case 'sua':
+                        # code...
+                        require_once('modules/quanlitintuc/update.php');
+                        break;
+                    case 'xoa_tin_tuc':
+                        # code...
+                        require_once('modules/quanlitintuc/delete.php');
+                        break;
+
+                    default:
+                        # code...
+                        break;
+                }
+                break;
+            case 'quan_tri':
+                # code...
+                switch ($thao_tac) {
+                    case 'them_admin':
+                        # code...
+                        require_once('modules/quanliquantri/insert.php');
+                        break;
+                    case 'xem_tat_ca':
+                        # code...
+                        require_once('modules/quanliquantri/view.php');
+                        break;
+                    case 'xoa_admin':
+                        # code...
+                        require_once('modules/quanliquantri/delete.php');
+                        break;
+                        case 'sua':
+                            # code...
+                            require_once('modules/quanliquantri/update.php');
+                            break;
+                    default:
+                        # code...
+                        break;
+                }
+                break;
             default:
                 # code...
 

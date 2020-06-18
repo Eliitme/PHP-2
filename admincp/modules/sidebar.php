@@ -2,6 +2,8 @@
 if (isset($_POST['logout'])) {
 	unset($_SESSION['dang-nhap']);
 	header('location: login.php');
+
+	session_start();
 }
 ?>
 
@@ -9,11 +11,17 @@ if (isset($_POST['logout'])) {
 	<ul class="sidebar">
 		<li>
 			<!-- <img src="../images/admin.png" alt="" height="100px"> -->
-			Chào mừng, <?php echo $_SESSION['dang-nhap']?"admin":"employee" ?>
+			Chào mừng, <?php echo $_SESSION['dang-nhap'] ?>
 		</li>
-		<li><a href="http://">Sửa Thông Tin Cá Nhân</a></li>
-		<li><a href="http://">Tạo Tài Khoản Nhân Viên</a></li>
-		<li><a href="http://">Upload Gallery</a></li>
+		<li><a href="index.php?quan_li=quan_tri&&thao_tac=sua&&ma=<?php echo $_SESSION['id_admin']?>">Sửa Thông Tin Cá Nhân</a></li>
+		<?php if ($_SESSION['cap_do'] == 1) { ?>
+			<li><a href="index.php?quan_li=quan_tri&&thao_tac=them_admin">Tạo Tài Khoản Nhân Viên</a></li>
+		<?php } else { ?>
+			<li><a href="index.php?quan_li=quan_tri&&thao_tac=xem_tat_ca">Xem Nhân Viên</a></li>
+		<?php
+		}
+		?>
+		<li><a href="http://">Đổi Ảnh Banner</a></li>
 		<li>
 			<form action="" method="post">
 				<button type="submit" name="logout">Đăng Xuất</button>

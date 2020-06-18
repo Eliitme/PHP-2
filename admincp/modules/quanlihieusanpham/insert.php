@@ -1,10 +1,7 @@
+
 <h2>Quản Lí Hiệu Sản Phẩm</h2>
 <form action="modules/quanlihieusanpham/process.php" method="post" onsubmit="return formHieuSP()">
     <table class="quan-li">
-        <tr>
-            <td>Mã Hiệu:</td>
-            <td><input type="text" name="ma_hieu" id="ma_hieu"></td>
-        </tr>
         <tr>
             <td>Hiệu Sản Phẩm:</td>
             <td><input type="text" name="hieu_san_pham" id="hieu_san_pham"></td>

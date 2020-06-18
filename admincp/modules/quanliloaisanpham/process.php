@@ -1,13 +1,13 @@
 <?php
 include('../config.php');
-$ma_loai = $_POST['ma_loai'];
+
 $ten_loai = $_POST['loai_san_pham'];
 $ma_hieu = $_POST['ma_hieu'];
 $tinh_trang = $_POST['tinh_trang'];
 
 if (isset($_POST['them_loai'])) {
-    $sql = "insert into quanliloaisanpham values
-            ('$ma_loai', '$ten_loai', '$ma_hieu', $tinh_trang)
+    $sql = "insert into quanliloaisanpham(ten_loai, id_hieu, tinh_trang) values
+            ('$ten_loai', '$ma_hieu', $tinh_trang)
         ";
 
     $rs = mysqli_query($conn, $sql);
@@ -16,6 +16,7 @@ if (isset($_POST['them_loai'])) {
         echo "<script>alert('Thêm loại sản phẩm thành công'); history.go(-1);</script>";
     } else echo "<script>alert('Thêm loại sản phẩm thất bại, mời thử lại!'); history.go(-1);</script>";
 } else if (isset($_POST['sua_loai'])) {
+    $ma_loai = $_POST['ma_loai'];
     $sql = "update quanliloaisanpham set
         ten_loai = '$ten_loai',
         id_hieu = '$ma_hieu',

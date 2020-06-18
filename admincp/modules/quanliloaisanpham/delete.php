@@ -2,7 +2,7 @@
 
 $ma_loai = $_GET['ma_loai'];
 
-$sql = "delete from quanliloaisanpham where id_loai = '$ma_loai'";
+$sql = "delete from quanliloaisanpham where id_loai = $ma_loai";
 
 $rs = mysqli_query($conn, $sql);
 

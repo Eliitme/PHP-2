@@ -12,15 +12,25 @@ function formLogin() {
   return true;
 }
 
-function formHieuSP() {
-  var ma_hieu = document.getElementById("ma-hieu").value;
-  var hieu_san_pham = document.getElementById("hieu-san-pham").value;
+function valiadate() {
+  var mat_khau = document.getElementById("mat_khau").value;
 
-  if (ma_hieu == null || ma_hieu == "") {
-    alert("Vui lòng nhập mã hiệu sản phẩm!");
+  if (mat_khau.length < 6) {
+    alert("Mật khẩu phải lớn hơn 6 kí tự");
     return false;
-  } else if (hieu_san_pham == null || hieu_san_pham == "") {
-    alert("Vui lòng nhập tên hiệu sản phẩm!");
+  }
+  return true;
+}
+
+function valiadate2() {
+  var mat_khau_moi = document.getElementById("mat_khau_moi").value;
+  var nhap_lai_mat_khau = document.getElementById("nhap_lai_mat_khau").value;
+
+  if (mat_khau_moi.length < 6) {
+    alert("Mật khẩu phải lớn hơn 6 kí tự");
+    return false;
+  } else if (mat_khau_moi != nhap_lai_mat_khau) {
+    alert("Nhập lại mật khẩu không đúng");
     return false;
   }
   return true;
