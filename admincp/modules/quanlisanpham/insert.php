@@ -1,3 +1,27 @@
+<?php
+function fill_brand($conn)
+{
+    $output = '';
+    $sql = "SELECT * FROM quanlihieusanpham";
+    $result = mysqli_query($conn, $sql);
+    while ($row = mysqli_fetch_array($result)) {
+        $output .= '<option value="' . $row["id_hieu"] . '">' . $row["ten_hieu"] . '</option>';
+    }
+    return $output;
+}
+function fill_product($conn)
+{
+    $output = '';
+    $sql = "SELECT * FROM quanliloaisanpham";
+    $result = mysqli_query($conn, $sql);
+    while ($row = mysqli_fetch_array($result)) {
+        $output .= '<option value="' . $row["id_loai"] . '">' . $row["ten_loai"] . '</option>';
+    }
+    return $output;
+}
+?>
+
+
 <h2>Quản Lí Sản Phẩm</h2>
 <form action="modules/quanlisanpham/process.php" method="post" enctype="multipart/form-data">
     <table class="quan-li">
@@ -12,16 +36,9 @@
         <tr>
             <td>Hiệu Sản Phẩm:</td>
             <td>
-                <select name="hieu_san_pham" id="hieu_san_pham" style="width: 100%;">
-                    <?php
-                    $sql = "select * from quanlihieusanpham where tinh_trang =1";
-                    $rs = mysqli_query($conn, $sql);
-                    while ($each = mysqli_fetch_array($rs)) {
-                    ?>
-                        <option value="<?php echo $each['id_hieu'] ?>"><?php echo $each['ten_hieu'] ?></option>
-                    <?php
-                    }
-                    ?>
+                <select name="hieu_san_pham" id="hieu_san_pham" style="width: 100%;" required>
+                    <option value="" disabled selected hidden>Chọn Hiệu Sản Phẩm</option>
+                    <?php echo fill_brand($conn); ?>
                 </select>
             </td>
         </tr>
@@ -29,15 +46,8 @@
             <td>Loại Sản Phẩm:</td>
             <td>
                 <select name="loai_san_pham" id="loai_san_pham" style="width: 100%;">
-                    <?php
-                    $sql = "select * from quanliloaisanpham where id_hieu in(Select id_hieu from quanlihieusanpham where tinh_trang = 1) and tinh_trang =1";
-                    $rs = mysqli_query($conn, $sql);
-                    while ($each = mysqli_fetch_array($rs)) {
-                    ?>
-                        <option value="<?php echo $each['id_loai'] ?>"><?php echo $each['ten_loai'] ?></option>
-                    <?php
-                    }
-                    ?>
+                <option value="">Chọn Loại Sản Phẩm</option>
+                    <?php echo fill_product($conn); ?>
                 </select>
             </td>
         </tr>
@@ -65,3 +75,21 @@
     </table>
 </form>
 <a href="index.php?quan_li=san_pham&&thao_tac=xem_tat_ca"><button style="width: 150px; height: 50px;">Xem tất Cả</button></a>
+
+<script>
+    $(document).ready(function() {
+        $('#hieu_san_pham').change(function() {
+            var id_hieu = $(this).val();
+            $.ajax({
+                url: "load_data.php",
+                method: "POST",
+                data: {
+                    id_hieu: id_hieu
+                },
+                success: function(data) {
+                    $('#loai_san_pham').html(data);
+                }
+            });
+        });
+    });
+</script>

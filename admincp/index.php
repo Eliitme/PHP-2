@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="style/style.css">
     <script src="script/script.js"></script>
     <script src="script/ckeditor/ckeditor.js"></script>
+    <script src="script/jquery-3.5.1.min.js"></script>
 </head>
 <body>
     <?php

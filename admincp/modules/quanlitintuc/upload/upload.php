@@ -7,15 +7,9 @@ $type = end($ext);
 
 $file_name = date('dmY-'.time(), time()).".$type";
 
-
-
 $array['uploaded'] = 1;
 $array['fileName'] = $file_name;
 $array['url'] = "/images/uploads/quanlitintuc/" . $file_name;
-
-// $path = '';
-
-// $rs = mysqli_query($conn, "insert into thuvienanh(path) values ('$path')");
 
 if (file_exists("quanlitintuc/" . $file_name))
 {

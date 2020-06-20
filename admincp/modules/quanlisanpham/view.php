@@ -4,8 +4,7 @@
     <tr>
         <td>Tên Sản Phẩm</td>
         <td>Ảnh Sản Phẩm</td>
-        <td>Hiệu Sản Phẩm</td>
-        <td>Loại Sản Phẩm</td>
+        <td>Hiệu - Loại Sản Phẩm</td>
         <td>Giá Sản Phẩm</td>
         <td>Số Lượng</td>
         <td>Tình Trạng</td>
@@ -23,8 +22,7 @@
         <tr>
             <td><?php echo $each['ten_san_pham'] ?></td>
             <td><img src="modules/quanlisanpham/<?php echo $each['anh_san_pham'] ?>" alt="" height="150px"></td>
-            <td><?php echo $each['ten_hieu'] ?></td>
-            <td><?php echo $each['ten_loai'] ?></td>
+            <td><?php echo $each['ten_hieu']." - ". $each['ten_loai'] ?></td>
             <td><?php echo $each['gia'] ?></td>
             <td><?php echo $each['so_luong'] ?></td>
             <td>
