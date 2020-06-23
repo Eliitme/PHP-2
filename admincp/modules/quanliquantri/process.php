@@ -22,7 +22,7 @@ if(isset($_POST['them_admin'])){
     $rs = mysqli_query($conn, $sql);
 
     if($rs) {
-        echo "<script>alert('Thêm nhân viên thành công'); window.location.replace('../../index.php?quan_li=quan_tri&&thao_tac=xem_tat_ca');</script>";
+        echo "<script>alert('Thêm nhân viên thành công'); window.location.replace('../../index.php?manage=quan_tri&action=xem_tat_ca');</script>";
     } else echo "<script>alert('Thêm nhân viên thất bại'); history.go(-1);</script>";
 }
 if(isset($_POST['sua'])){

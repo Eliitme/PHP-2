@@ -1,4 +1,3 @@
-
 <h2>Quản Lí Hiệu Sản Phẩm</h2>
 <form action="modules/quanlihieusanpham/process.php" method="post" onsubmit="return formHieuSP()">
     <table class="quan-li">
@@ -17,8 +16,9 @@
         </tr>
         <tr>
             <td></td>
-            <td><button type="submit" name="them_hieu" style="width: 100%;">Thêm Hiệu Sản Phẩm</button></td>
+            <td><button type="submit" name="them_hieu" style="width: 100%; height: 35px;">Thêm Hiệu Sản Phẩm</button></td>
         </tr>
     </table>
 </form>
-<a href="index.php?quan_li=hieu_san_pham&&thao_tac=xem_tat_ca"><button style="width: 150px; height: 50px;">Xem tất Cả</button></a>
+<br>
+<a href="index.php?manage=hieu_san_pham&action=xem_tat_ca"><button style="width: 150px;">Xem tất Cả</button></a>

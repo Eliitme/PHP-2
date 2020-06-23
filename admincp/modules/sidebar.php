@@ -13,11 +13,11 @@ if (isset($_POST['logout'])) {
 			<!-- <img src="../images/admin.png" alt="" height="100px"> -->
 			Chào mừng, <?php echo $_SESSION['dang-nhap'] ?>
 		</li>
-		<li><a href="index.php?quan_li=quan_tri&&thao_tac=sua&&ma=<?php echo $_SESSION['id_admin']?>">Sửa Thông Tin Cá Nhân</a></li>
+		<li><a href="index.php?manage=quan_tri&action=sua&ma=<?php echo $_SESSION['id_admin']?>">Sửa Thông Tin Cá Nhân</a></li>
 		<?php if ($_SESSION['cap_do'] == 1) { ?>
-			<li><a href="index.php?quan_li=quan_tri&&thao_tac=them_admin">Tạo Tài Khoản Nhân Viên</a></li>
+			<li><a href="index.php?manage=quan_tri&action=them_admin">Tạo Tài Khoản Nhân Viên</a></li>
 		<?php } else { ?>
-			<li><a href="index.php?quan_li=quan_tri&&thao_tac=xem_tat_ca">Xem Nhân Viên</a></li>
+			<li><a href="index.php?manage=quan_tri&action=xem_tat_ca">Xem Nhân Viên</a></li>
 		<?php
 		}
 		?>

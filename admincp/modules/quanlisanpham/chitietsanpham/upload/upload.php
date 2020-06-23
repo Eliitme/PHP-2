@@ -1,4 +1,5 @@
 <?php
+include('../../config.php');
 
 $ext = explode(".", $_FILES['upload']['name']);
 
@@ -6,15 +7,11 @@ $type = end($ext);
 
 $file_name = date('dmY-'.time(), time()).".$type";
 
-
-
 $array['uploaded'] = 1;
 $array['fileName'] = $file_name;
-$array['url'] = "modules/quanlisanpham/chitietsanpham/upload/" . $file_name;
-$path = $array['url'];
+$array['url'] = "/images/uploads/quanlisanpham/" . $file_name;
 
-
-if (file_exists("upload/" . $file_name))
+if (file_exists("quanlisanpham/" . $file_name))
 {
   $array['error']['message'] = $file_name . " already exists. ";
 }

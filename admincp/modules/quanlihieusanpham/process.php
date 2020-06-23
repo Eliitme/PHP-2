@@ -26,6 +26,7 @@ if (isset($_POST['them_hieu'])) {
     $rs = mysqli_query($conn, $sql);
 
     if ($rs) {
-        echo "<script>alert('Sửa hiệu sản phẩm thành công'); window.location.replace('../../index.php?quan_li=hieu_san_pham&&thao_tac=xem_tat_ca');</script>";
+        echo "<script>alert('Sửa hiệu sản phẩm thành công'); window.location.replace('../../index.php?manage=hieu_san_pham&action=xem_tat_ca');</script>";
     } else echo "<script>alert('Sửa hiệu sản phẩm thất bại, mời thử lại!'); history.go(-1);</script>";
 }
+

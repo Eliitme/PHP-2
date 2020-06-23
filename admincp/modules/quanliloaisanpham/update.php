@@ -1,6 +1,6 @@
 <h2>Quản Lí Loại Sản Phẩm</h2>
 <form action="modules/quanliloaisanpham/process.php" method="post">
-    <table border="1px" style="border-collapse:collapse;" class="quan-li-xem-sua">
+    <table border="1px" style="border-collapse:collapse;" class="quan-li">
         <tr>
             <td>Tên Loại</td>
             <td>Tên Hiệu</td>

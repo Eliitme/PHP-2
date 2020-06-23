@@ -29,8 +29,13 @@ if (isset($_POST['them_san_pham'])) {
     $rs = mysqli_query($conn, $sql);
     if ($rs) {
         move_uploaded_file($_FILES['anh_san_pham']['tmp_name'], $url);
+        $sql = "select id_san_pham from quanlisanpham where ten_san_pham='$ten_san_pham'";
 
-        echo "<script>alert('Thêm Sản Phẩm Thành Công'); alert('Mời Thêm Chi Tiết Sản Phẩm'); window.location.replace('../../index.php?quan_li=san_pham&&thao_tac=them_chi_tiet&&ma_san_pham=$ma_san_pham');</script>";
+        $rs = mysqli_query($conn, $sql);
+        $each = mysqli_fetch_array($rs);
+        $ma_san_pham = $each['id_san_pham'];
+
+        echo "<script>alert('Thêm Sản Phẩm Thành Công'); alert('Mời Thêm Chi Tiết Sản Phẩm'); window.location.replace('../../index.php?manage=san_pham&action=them_chi_tiet&ma_san_pham=$ma_san_pham');</script>";
     } else echo "<script>alert('Thêm Sản Phẩm Thất Bại'); history.go(-1);</script>";
 }
 
@@ -56,6 +61,6 @@ if (isset($_POST['sua_san_pham'])) {
         ";
     $rs = mysqli_query($conn, $sql);
     if ($rs) {
-        echo "<script>alert('Sửa Sản Phẩm Thành Công'); window.location.replace('../../index.php?quan_li=san_pham&&thao_tac=xem_tat_ca');</script>";
+        echo "<script>alert('Sửa Sản Phẩm Thành Công'); window.location.replace('../../index.php?manage=san_pham&action=xem_tat_ca');</script>";
     } else echo "<script>alert('Sửa Sản Phẩm Thất Bại'); history.go(-1);</script>";
 }

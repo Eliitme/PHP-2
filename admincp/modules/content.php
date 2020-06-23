@@ -1,12 +1,12 @@
 <div class="content">
     <div class="content-box">
         <?php
-        $quan_li = $_GET['quan_li'] ?? '';
-        $thao_tac = $_GET['thao_tac'] ?? '';
-        switch ($quan_li) {
+        $manage = $_GET['manage'] ?? '';
+        $action = $_GET['action'] ?? '';
+        switch ($manage) {
             case 'hieu_san_pham':
                 # code...
-                switch ($thao_tac) {
+                switch ($action) {
                     case 'them_hieu':
                         # code...
                         require_once('modules/quanlihieusanpham/insert.php');
@@ -20,6 +20,9 @@
                     case 'xoa_hieu':
                         require_once('modules/quanlihieusanpham/delete.php');
                         break;
+                    case 'tim_kiem':
+                        require_once('modules/quanlihieusanpham/search.php');
+                        break;
 
                     default:
                         # code...
@@ -28,7 +31,7 @@
                 }
                 break;
             case 'loai_san_pham':
-                switch ($thao_tac) {
+                switch ($action) {
                     case 'them_loai':
                         # code...
                         require_once('modules/quanliloaisanpham/insert.php');
@@ -42,6 +45,9 @@
                     case 'xoa_loai':
                         require_once('modules/quanliloaisanpham/delete.php');
                         break;
+                    case 'tim_kiem':
+                        require_once('modules/quanliloaisanpham/search.php');
+                        break;
 
                     default:
                         # code...
@@ -50,7 +56,7 @@
                 }
                 break;
             case 'san_pham':
-                switch ($thao_tac) {
+                switch ($action) {
                     case 'them_san_pham':
                         require_once('modules/quanlisanpham/insert.php');
                         break;
@@ -73,9 +79,22 @@
                         break;
                 }
                 break;
+
+            case 'chi_tiet_san_pham':
+                switch ($action) {
+                    case 'xem_chi_tiet':
+                        # code...
+                        require_once('modules/quanlisanpham/chitietsanpham/view.php');
+                        break;
+
+                    default:
+                        # code...
+                        break;
+                }
+                break;
             case 'tin_tuc':
                 # code...
-                switch ($thao_tac) {
+                switch ($action) {
                     case 'them_tin_tuc':
                         # code...
                         require_once('modules/quanlitintuc/insert.php');
@@ -103,7 +122,7 @@
                 break;
             case 'quan_tri':
                 # code...
-                switch ($thao_tac) {
+                switch ($action) {
                     case 'them_admin':
                         # code...
                         require_once('modules/quanliquantri/insert.php');
@@ -116,10 +135,10 @@
                         # code...
                         require_once('modules/quanliquantri/delete.php');
                         break;
-                        case 'sua':
-                            # code...
-                            require_once('modules/quanliquantri/update.php');
-                            break;
+                    case 'sua':
+                        # code...
+                        require_once('modules/quanliquantri/update.php');
+                        break;
                     default:
                         # code...
                         break;

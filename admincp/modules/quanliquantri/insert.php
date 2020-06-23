@@ -17,4 +17,4 @@
             </tr>
         </table>
     </form>
-    <a href="index.php?quan_li=quan_tri&&thao_tac=xem_tat_ca"><button style="width: 150px; height: 50px;">Xem tất Cả</button></a>
+    <a href="index.php?manage=quan_tri&action=xem_tat_ca"><button style="width: 150px; height: 50px;">Xem tất Cả</button></a>

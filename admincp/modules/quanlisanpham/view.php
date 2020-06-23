@@ -34,13 +34,13 @@
                 ?>
             </td>
             <td>
-                <a href="">Xem chi tiết</a>
+                <a href="index.php?manage=chi_tiet_san_pham&action=xem_chi_tiet&ma_san_pham=<?php echo $each['id_san_pham']; ?>">Xem chi tiết</a>
             </td>
             <td>
-                <a href="index.php?quan_li=san_pham&&thao_tac=sua&&ma_san_pham=<?php echo $each['id_san_pham']; ?>"><img src="../images/edit.png" alt="" width="15px">Sửa</a>
+                <a href="index.php?manage=san_pham&action=sua&ma_san_pham=<?php echo $each['id_san_pham']; ?>"><img src="../images/edit.png" alt="" width="15px">Sửa</a>
             </td>
             <td>
-                <a href="index.php?quan_li=san_pham&&thao_tac=xoa_san_pham&&ma_san_pham=<?php echo $each['id_san_pham']; ?>" onclick="confirm('Bạn có muốn xóa trường hợp này không?')"><img src="../images/delete.png" alt="" width="15px">Xóa</a>
+                <a href="index.php?manage=san_pham&action=xoa_san_pham&ma_san_pham=<?php echo $each['id_san_pham']; ?>" onclick="confirm('Bạn có muốn xóa trường hợp này không?')"><img src="../images/delete.png" alt="" width="15px">Xóa</a>
             </td>
         </tr>
     <?php
@@ -48,7 +48,7 @@
     ?>
     <tr>
         <td colspan="10">
-            <a href="index.php?quan_li=san_pham&&thao_tac=them_san_pham"><button>Thêm Sản Phẩm</button></a>
+            <a href="index.php?manage=san_pham&action=them_san_pham"><button>Thêm Sản Phẩm</button></a>
         </td>
     </tr>
 </table>

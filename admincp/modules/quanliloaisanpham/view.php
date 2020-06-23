@@ -1,5 +1,10 @@
 <h2>Quản Lí Loại Sản Phẩm</h2>
 
+<form action="?manage=loai_san_pham&action=tim_kiem" method="post" style="float: right;">
+    Tìm kiếm loại sản phẩm:
+    <input type="search" name="tim_kiem" id="tim_kiem">
+</form>
+
 <table border="1px" style="border-collapse:collapse;" class="quan-li-xem-sua">
     <tr>
         <td>Tên Loại</td>
@@ -28,16 +33,16 @@
                 ?>
             </td>
             <td>
-                <a href="index.php?quan_li=loai_san_pham&&thao_tac=sua&&ma_loai=<?php echo $each['id_loai']; ?>"><img src="../images/edit.png" alt="" width="15px">Sửa</a>
+                <a href="index.php?manage=loai_san_pham&action=sua&ma_loai=<?php echo $each['id_loai']; ?>"><img src="../images/edit.png" alt="" width="15px">Sửa</a>
             </td>
             <td>
-                <a href="index.php?quan_li=loai_san_pham&&thao_tac=xoa_loai&&ma_loai=<?php echo $each['id_loai']; ?>" onclick="confirm('Bạn có muốn xóa trường hợp này không?')"><img src="../images/delete.png" alt="" width="15px">Xóa</a>
+                <a href="index.php?manage=loai_san_pham&action=xoa_loai&ma_loai=<?php echo $each['id_loai']; ?>" onclick="confirm('Bạn có muốn xóa trường hợp này không?')"><img src="../images/delete.png" alt="" width="15px">Xóa</a>
             </td>
         </tr>
     <?php } ?>
     <tr>
         <td colspan="5">
-            <a href="index.php?quan_li=loai_san_pham&&thao_tac=them_loai"><button>Thêm Loại Sản Phẩm</button></a>
+            <a href="index.php?manage=loai_san_pham&action=them_loai"><button>Thêm Loại Sản Phẩm</button></a>
         </td>
     </tr>
 </table>

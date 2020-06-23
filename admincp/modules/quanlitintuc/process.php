@@ -23,7 +23,7 @@ if(isset($_POST['them_tin_tuc'])){
     $rs = mysqli_query($conn, $sql);
     if ($rs) {
         move_uploaded_file($_FILES['anh_bai_viet']['tmp_name'], $url);
-        echo "<script>alert('Thêm Sản Phẩm Thành Công'); window.location.replace('../../index.php?quan_li=tin_tuc&&thao_tac=xem_tat_ca');</script>";
+        echo "<script>alert('Thêm Sản Phẩm Thành Công'); window.location.replace('../../index.php?manage=tin_tuc&action=xem_tat_ca');</script>";
     } else echo "<script>alert('Thêm Sản Phẩm Thất Bại'); history.go(-1);</script>";
 }
 
@@ -48,6 +48,6 @@ if(isset($_POST['sua_tin_tuc'])){
         ";
     $rs = mysqli_query($conn, $sql);
     if($rs){
-        echo "<script>alert('Sửa Bài Viết Thành Công'); window.location.replace('../../index.php?quan_li=tin_tuc&&thao_tac=xem_tat_ca');</script>";
+        echo "<script>alert('Sửa Bài Viết Thành Công'); window.location.replace('../../index.php?manage=tin_tuc&action=xem_tat_ca');</script>";
     } else echo "<script>alert('Sửa Thất Bại'); history.go(-1);</script>";
 }

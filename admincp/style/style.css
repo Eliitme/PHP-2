@@ -15,7 +15,7 @@ body {
 }
 .sidebar-nav {
   text-align: center;
-  width: 25%;
+  width: 20%;
   height: 400px;
   float: left;
   position: relative;
@@ -57,7 +57,7 @@ body {
 }
 
 .menu-nav {
-  width: 74%;
+  width: 79%;
   height: 50px;
   float: right;
   background-color: slateblue;

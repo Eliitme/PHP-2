@@ -28,7 +28,16 @@
             </li>
         <?php } ?>
         <li>
-            <a href=""><i class="fas fa-shopping-cart"></i> Giỏ hàng:</a>
+            <a href="?manage=gio_hang&action=xem_gio_hang"><i class="fas fa-shopping-cart"></i>Giỏ hàng:
+                <?php
+                if (!isset($_SESSION['so_luong'])) {
+                    echo "0";
+                } else {
+                    echo $_SESSION['so_luong'];
+                }
+
+                ?>
+            </a>
         </li>
     </ul>
 </div>

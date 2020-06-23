@@ -19,7 +19,7 @@ $each = mysqli_fetch_array($rs);
                 <textarea name="thong_so_ki_thuat" id="thong_so_ki_thuat"></textarea>
                 <script>
                     CKEDITOR.replace('thong_so_ki_thuat',{
-                        filebrowserUploadUrl: '../../images/uploads/quanlitintuc/upload.php',
+                        filebrowserUploadUrl: '../images/uploads/quanlisanpham/upload.php',
                     });
                 </script>
             </td>
@@ -39,7 +39,7 @@ $each = mysqli_fetch_array($rs);
                 <textarea name="mo_ta_chi_tiet" id="mo_ta_chi_tiet"></textarea>
                 <script>
                     CKEDITOR.replace('mo_ta_chi_tiet',{
-                        filebrowserUploadUrl: '../../images/uploads/quanlitintuc/upload.php',
+                        filebrowserUploadUrl: '../images/uploads/quanlisanpham/upload.php',
                     });
                 </script>
             </td>

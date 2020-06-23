@@ -24,7 +24,7 @@
                 if ($each['ten_dang_nhap'] != $_SESSION['dang-nhap']) {
             ?>
                     <td>
-                        <a href="index.php?quan_li=quan_tri&&thao_tac=xoa_admin&&ma_admin=<?php echo $each['id_admin']; ?>" onclick="confirm('Bạn có muốn xóa trường hợp này không?')"><img src="../images/delete.png" alt="" width="15px">Xóa</a>
+                        <a href="index.php?manage=quan_tri&action=xoa_admin&ma_admin=<?php echo $each['id_admin']; ?>" onclick="confirm('Bạn có muốn xóa trường hợp này không?')"><img src="../images/delete.png" alt="" width="15px">Xóa</a>
                     </td>
                 <?php
                 } else { ?>
@@ -42,7 +42,7 @@
     ?>
     <tr>
         <td colspan="3">
-            <a href="index.php?quan_li=quan_tri&&thao_tac=them_admin"><button>Thêm Nhân Viên</button></a>
+            <a href="index.php?manage=quan_tri&action=them_admin"><button>Thêm Nhân Viên</button></a>
         </td>
     </tr>
 </table>

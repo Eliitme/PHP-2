@@ -69,12 +69,12 @@
         <h4>SẢN PHẨM</h4>
         <ul>
             <?php
-                $sql = "select ten_hieu, COUNT(id_san_pham) as tong_san_pham from quanlihieusanpham join quanlisanpham on quanlisanpham.id_hieu = quanlihieusanpham.id_hieu where quanlisanpham.tinh_trang = 1 GROUP by quanlihieusanpham.id_hieu";
+                $sql = "select quanlihieusanpham.id_hieu, ten_hieu, COUNT(id_san_pham) as tong_san_pham from quanlihieusanpham join quanlisanpham on quanlisanpham.id_hieu = quanlihieusanpham.id_hieu where quanlisanpham.tinh_trang = 1 GROUP by quanlihieusanpham.id_hieu";
                 $rs = mysqli_query($conn, $sql);
 
                 while($each = mysqli_fetch_array($rs)){
                     ?>
-                    <li><a href=""><?php echo $each['ten_hieu'] ?>(<?php echo $each['tong_san_pham'] ?></a></li>
+                    <li><a href="?manage=xem_san_pham&action=theo_hieu&hieu=<?php echo $each['id_hieu']?>"><?php echo $each['ten_hieu'] ?>(<?php echo $each['tong_san_pham'] ?>)</a></li>
                     <?php
                 }
             ?>
