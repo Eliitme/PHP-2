@@ -7,7 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/all.css">
+    <link rel="stylesheet" href="style/style-log.css">
     <script src="script/all.js"></script>
+    <script src="script/script.js"></script>
 </head>
 
 <body>

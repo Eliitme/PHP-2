@@ -15,7 +15,10 @@
                     # code...
                     require_once('shopping_cart/view_cart.php');
                     break;
-
+                case 'dat_hang':
+                    # code...
+                    require_once('shopping_cart/pay_cart.php');
+                    break;
                 default:
                     # code...
                     break;
@@ -28,12 +31,42 @@
                     # code...
                     require_once('sanpham/view.php');
                     break;
-                
+                case 'tim_kiem':
+                    require_once('sanpham/view.php');
+                    break;
+                case 'xem_tat_ca':
+                    require_once('sanpham/view.php');
+                    break;
                 default:
                     # code...
                     break;
             }
-
+            break;
+        case 'khach_hang':
+            switch ($action) {
+                case 'cap_nhat':
+                    # code...
+                    require_once('customer/update.php');
+                    break;
+                case 'dang_ki':
+                    # code...
+                    require_once('customer/dang_ki.php');
+                    break;
+                case 'dang_nhap':
+                    # code...
+                    require_once('customer/dang_nhap.php');
+                    break;
+                case 'xem_lich_su_mua_hang':
+                    require_once('customer/order_history.php');
+                    break;
+                case 'xem_thong_tin':
+                    require_once('customer/view_profile.php');
+                    break;
+                default:
+                    # code...
+                    break;
+            }
+            break;
         default:
             # code...
             break;

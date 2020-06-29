@@ -5,8 +5,11 @@ order allow,deny
 deny from all
 </files>
 
-RewriteEngine on
+# Bảo vệ file .htaccess
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
 
-#http://example.com/results.php?manage=produce&action=fruit&species=apple
-#http://example.com/produce/fruit/apple
-RewriteRule ^admincp/(hieu_san_pham|loai_san_pham|san_pham|tin_tuc|gio_hang)/([^/.]+)$ admincp/index.php?manage=$1&action=$2
+
+

@@ -9,13 +9,12 @@
     <tr>
         <td>Tên Loại</td>
         <td>Tên Hiệu</td>
-        <td>Tình Trạng</td>
         <td colspan="2">Quản Lí</td>
     </tr>
 
     <?php
 
-    $sql = "select id_loai, ten_loai, ten_hieu, quanliloaisanpham.tinh_trang as tinh_trang from quanliloaisanpham join quanlihieusanpham on quanlihieusanpham.id_hieu = quanliloaisanpham.id_hieu";
+    $sql = "select id_loai, ten_loai, ten_hieu from quanliloaisanpham join quanlihieusanpham on quanlihieusanpham.id_hieu = quanliloaisanpham.id_hieu";
     $rs = mysqli_query($conn, $sql);
 
     while ($each = mysqli_fetch_assoc($rs)) {
@@ -24,14 +23,6 @@
         <tr>
             <td><?php echo $each['ten_loai']; ?></td>
             <td><?php echo $each['ten_hieu']?></td>
-            <td>
-                <?php
-                $tinh_trang = $each['tinh_trang'];
-                if ($tinh_trang) {
-                    echo "Kích Hoạt";
-                } else echo "Không Kích Hoạt";
-                ?>
-            </td>
             <td>
                 <a href="index.php?manage=loai_san_pham&action=sua&ma_loai=<?php echo $each['id_loai']; ?>"><img src="../images/edit.png" alt="" width="15px">Sửa</a>
             </td>

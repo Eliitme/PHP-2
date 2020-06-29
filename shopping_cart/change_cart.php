@@ -13,5 +13,6 @@ if($_SESSION['gio_hang'][$ma_san_pham]['so_luong'] == 0){
 ?>
 
 <script>
+    alert("Giảm số lượng sản phẩm thành công!")
     history.back();
 </script>

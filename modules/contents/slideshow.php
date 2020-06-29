@@ -38,23 +38,21 @@
 </style>
 
 <div class="slideshow">
-    <div class="mySlides">
-        <img src="https://freetuts.net/upload/tut_post/images/2017/07/30/964/slide-1.jpg" style="width:100%">
-    </div>
+    <?php
+    $sql = "select * from gallery order by id_anh desc limit 4";
+    $rs = mysqli_query($conn, $sql);
 
-    <div class="mySlides">
-        <img src="https://freetuts.net/upload/tut_post/images/2017/07/30/964/slide-2.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-        <img src="https://freetuts.net/upload/tut_post/images/2017/07/30/964/slide-3.jpg" style="width:100%">
-    </div>
-
+    while ($each = mysqli_fetch_array($rs)) { ?>
+        <div class="mySlides">
+            <img src="/PHP 2/admincp/modules/gallery/<?php echo $each['url'] ?>" style="height:350px; width: 100%;">
+        </div>
+    <?php } ?>
     <div style="text-align:center" class="dot-box">
-        <span class="dot" onclick="currentSlide(0)"></span>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
+        <?php for ($i = 0; $i < mysqli_num_rows($rs); $i++) { ?>
+            <span class="dot" onclick="currentSlide(<?php echo $i ?>)"></span>
+        <?php } ?>
     </div>
+
 </div>
 
 <script>

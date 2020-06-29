@@ -2,12 +2,12 @@
 include('../config.php');
 
 $ten_hieu = $_POST['hieu_san_pham'];
-$tinh_trang = $_POST['tinh_trang'];
+
 
 if (isset($_POST['them_hieu'])) {
 
-    $sql = "insert into quanlihieusanpham(ten_hieu, tinh_trang) values
-            ('$ten_hieu', $tinh_trang)
+    $sql = "insert into quanlihieusanpham(ten_hieu) values
+            ('$ten_hieu')
         ";
 
     $rs = mysqli_query($conn, $sql);
@@ -19,7 +19,6 @@ if (isset($_POST['them_hieu'])) {
     $ma_hieu = $_POST['ma_hieu'];
     $sql = "update quanlihieusanpham set
         ten_hieu = '$ten_hieu',
-        tinh_trang = $tinh_trang
         where id_hieu = $ma_hieu
     ";
 

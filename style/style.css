@@ -40,9 +40,29 @@ body {
 }
 
 .search-box {
+  text-align: center;
   width: 400px;
   height: 140px;
   border: 1px solid violet;
+  display: block;
+}
+
+input[type="search"]#tim-kiem {
+  margin-top: -5px;
+  width: 80%;
+  padding: 10px 10px 10px 10px;
+  border-radius: 25px;
+  border: none;
+}
+
+input[type="search"]#tim-kiem:focus {
+  outline-style: none;
+}
+
+span.icon-search {
+  position: relative;
+  right: 50px;
+  color: lightseagreen;
 }
 
 .banner {
@@ -152,12 +172,12 @@ li:hover ul#sub-menu {
   width: 100%;
   display: block;
   position: relative;
-  top: 20px;
 }
 
 #sidebar {
   float: left;
   width: 20%;
+  height: 100%;
   position: relative;
   height: auto;
 }
@@ -217,6 +237,7 @@ li:hover ul#sub-menu {
 
 .content-box {
   width: 100%;
+  height: auto;
   /* border: 1px solid black; */
   position: relative;
   top: 10px;
@@ -261,7 +282,8 @@ li:hover ul#sub-menu {
   border: 1px solid black;
   float: left;
 }
-.item-san-pham{
+.item-san-pham,
+.product-items {
   width: 230px;
   border: 1px solid silver;
   position: relative;
@@ -269,5 +291,149 @@ li:hover ul#sub-menu {
   margin: 0 auto;
   background-color: white;
   height: 300px;
+  margin-left: 2px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.item-san-pham:hover{
+  transform: scale(1.02, 1.02);
 
+}
+/* css hiển thị sản phẩm chi tiết */
+.product {
+  position: relative;
+  min-width: 76%;
+  display: block;
+  float: left;
+}
+.thong-tin-san-pham{
+  position: relative;
+  float: right;
+  width: 78%;
+  
+}
+
+img#anh-san-pham {
+  width: 450px;
+  height: 300px;
+  float: left;
+}
+h3#gia-san-pham {
+  color: red;
+  position: relative;
+  left: 5%;
+}
+div#khuyen-mai {
+  position: relative;
+  left: 5%;
+  float: left;
+  width: 50%;
+  font-size: 14px;
+  height: 200px;
+}
+h3#khuyen-mai {
+  margin-bottom: 25px;
+}
+
+div#mua-hang {
+  position: relative;
+  left: 5%;
+  float: left;
+  margin-top: 15px;
+}
+
+div#mua-hang a {
+  padding: 10px 5px;
+  border: 1px solid red;
+  text-decoration: none;
+  border-radius: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: red;
+}
+
+div#mua-hang a:hover {
+  background-color: blue;
+}
+div#thong-so-ki-thuat {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+div#thong-so-ki-thuat > p {
+  font-weight: bold;
+  font-style: italic;
+}
+
+div#thong-so-ki-thuat > table {
+  width: 300px;
+  border-collapse: collapse;
+}
+div#thong-so-ki-thuat > table th {
+  text-align: left;
+  width: 160px;
+}
+
+div#chi-tiet-san-pham {
+  float: left;
+  width: 100%;
+  text-align: justify;
+}
+
+div#chi-tiet-san-pham > p > img {
+  width: 80%;
+}
+
+/* Cập nhật thông tin cá nhân */
+
+.thong-tin-ca-nhan{
+  display: block;
+}
+
+.anh-dai-dien{
+  position: relative;
+  float: left;
+  width: 200px;
+  text-align: center;
+}
+
+.anh-dai-dien a{
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 200px;
+  text-decoration: none;
+  margin-top: 5px;
+}
+.anh-dai-dien a:hover{
+  color: red;
+}
+.thong-tin{
+  position: relative;
+  float: right;
+  justify-items: left;
+}
+
+.thong-tin table {
+  width: 700px;
+}
+
+.cap-nhat{
+  position: relative;
+  top: 65px;
+}
+
+.cap-nhat a{
+  padding: 10px;
+  border: 1px solid greenyellow;
+  border-radius: 15px;
+  background-color: greenyellow;
+  color: black;
+  font-size: large;
+  text-decoration: none;
+}
+
+.cap-nhat a:hover{
+  zoom: 1.02;
 }

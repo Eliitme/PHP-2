@@ -6,7 +6,6 @@
 <table border="1px" style="border-collapse:collapse;" class="quan-li-xem-sua">
     <tr>
         <td>Tên Hiệu</td>
-        <td>Tình Trạng</td>
         <td colspan="2">Quản Lí</td>
     </tr>
     <?php
@@ -22,14 +21,7 @@
         while ($each = mysqli_fetch_array($rs)) { ?>
             <tr>
                 <td><?php echo $each['ten_hieu']; ?></td>
-                <td>
-                    <?php
-                    $tinh_trang = $each['tinh_trang'];
-                    if ($tinh_trang) {
-                        echo "Kích Hoạt";
-                    } else echo "Không Kích Hoạt";
-                    ?>
-                </td>
+
                 <td>
                     <a href="index.php?manage=hieu_san_pham&action=sua&ma_hieu=<?php echo $each['id_hieu']; ?>"><img src="../images/edit.png" alt="" width="15px">Sửa</a>
                 </td>

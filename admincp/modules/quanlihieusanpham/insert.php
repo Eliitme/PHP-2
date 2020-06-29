@@ -6,15 +6,6 @@
             <td><input type="text" name="hieu_san_pham" id="hieu_san_pham"></td>
         </tr>
         <tr>
-            <td>Tình trạng:</td>
-            <td>
-                <select name="tinh_trang" id="tinh_trang" style="width: 100%;">
-                    <option value="0">Không Kích Hoạt</option>
-                    <option value="1">Kích Hoạt</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
             <td></td>
             <td><button type="submit" name="them_hieu" style="width: 100%; height: 35px;">Thêm Hiệu Sản Phẩm</button></td>
         </tr>

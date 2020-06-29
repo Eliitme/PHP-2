@@ -21,7 +21,7 @@ if (isset($_POST['logout'])) {
 		<?php
 		}
 		?>
-		<li><a href="http://">Đổi Ảnh Banner</a></li>
+		<li><a href="/PHP 2/admincp/index.php?manage=banner&action=them_banner">Đổi Ảnh Banner</a></li>
 		<li>
 			<form action="" method="post">
 				<button type="submit" name="logout">Đăng Xuất</button>

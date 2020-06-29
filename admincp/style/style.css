@@ -135,3 +135,63 @@ table.quan-li-xem-sua {
 input[type = text]{
   width: 98%;
 }
+
+.thong-tin-san-pham{
+  position: relative;
+  float: right;
+  width: 78%;
+  
+}
+
+img#anh-san-pham {
+  width: 450px;
+  height: 300px;
+  float: left;
+}
+h3#gia-san-pham {
+  color: red;
+  position: relative;
+  left: 5%;
+}
+div#khuyen-mai {
+  position: relative;
+  left: 5%;
+  float: left;
+  width: 50%;
+  font-size: 14px;
+  height: 200px;
+}
+h3#khuyen-mai {
+  margin-bottom: 25px;
+}
+
+
+div#thong-so-ki-thuat {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+
+div#thong-so-ki-thuat > p {
+  font-weight: bold;
+  font-style: italic;
+}
+
+div#thong-so-ki-thuat > table {
+  width: 300px;
+  border-collapse: collapse;
+}
+div#thong-so-ki-thuat > table th {
+  text-align: left;
+  width: 160px;
+}
+
+div#chi-tiet-san-pham {
+  float: left;
+  width: 100%;
+  text-align: justify;
+}
+
+div#chi-tiet-san-pham > p > img {
+  width: 80%;
+}

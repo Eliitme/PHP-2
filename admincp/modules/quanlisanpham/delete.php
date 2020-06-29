@@ -8,6 +8,10 @@ $anh = mysqli_fetch_array($anh_san_pham);
 
 unlink('modules/quanlisanpham/'.$anh['anh_san_pham']);
 
+$sql = "delete from chitietsanpham where id_san_pham = '$ma_san_pham'";
+
+$rs = mysqli_query($conn, $sql);
+
 $sql = "delete from quanlisanpham where id_san_pham = '$ma_san_pham'";
 
 $rs = mysqli_query($conn, $sql);

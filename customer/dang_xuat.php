@@ -2,4 +2,4 @@
 
 session_start();
 unset($_SESSION['dang-nhap']);
-header('location: index.php');
+header('location: /PHP 2/index.php');

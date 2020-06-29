@@ -37,5 +37,6 @@ else{
 ?>
 
 <script>
+	alert('Thêm 1 sản phẩm vào giỏ hàng thành công, mời tiếp tục mua hàng!')
 	history.back();
 </script>

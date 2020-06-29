@@ -86,6 +86,10 @@
                         # code...
                         require_once('modules/quanlisanpham/chitietsanpham/view.php');
                         break;
+                        case 'sua':
+                            # code...
+                            require_once('modules/quanlisanpham/chitietsanpham/update.php');
+                            break;
 
                     default:
                         # code...
@@ -139,6 +143,31 @@
                         # code...
                         require_once('modules/quanliquantri/update.php');
                         break;
+                    default:
+                        # code...
+                        break;
+                }
+                break;
+
+            case 'banner':
+                switch ($action) {
+                    case 'them_banner':
+                        # code...
+                        require_once('modules/gallery/insert.php');
+                        break;
+
+                    default:
+                        # code...
+                        break;
+                }
+                break;
+            case 'hoa_don':
+                switch ($action) {
+                    case 'xem_hoa_don':
+                        # code...
+                        require_once('modules/quanlihoadon/view.php');
+                        break;
+
                     default:
                         # code...
                         break;

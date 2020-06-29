@@ -4,7 +4,6 @@
         <tr>
             <td>Tên Loại</td>
             <td>Tên Hiệu</td>
-            <td>Tình Trạng</td>
         </tr>
 
         <?php
@@ -33,12 +32,6 @@
                         <?php
                         }
                         ?>
-                    </select>
-                </td>
-                <td>
-                    <select name="tinh_trang" id="tinh_trang">
-                        <option value="1">Kích Hoạt</option>
-                        <option value="0">Không Kích Hoạt</option>
                     </select>
                 </td>
             </tr>

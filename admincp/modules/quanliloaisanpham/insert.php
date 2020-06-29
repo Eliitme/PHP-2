@@ -10,7 +10,7 @@
             <td>
                 <select name="ma_hieu" id="ma_hieu" style="width: 100%;">
                     <?php
-                    $sql = "select * from quanlihieusanpham where tinh_trang = 1";
+                    $sql = "select * from quanlihieusanpham";
                     $rs = mysqli_query($conn, $sql);
                     while ($each = mysqli_fetch_array($rs)) {
                     ?>
@@ -21,15 +21,7 @@
                 </select>
             </td>
         </tr>
-        <tr>
-            <td>Tình trạng:</td>
-            <td>
-                <select name="tinh_trang" id="tinh_trang" style="width: 100%;">
-                    <option value="0">Không Kích Hoạt</option>
-                    <option value="1">Kích Hoạt</option>
-                </select>
-            </td>
-        </tr>
+        
         <tr>
             <td></td>
             <td><button type="submit" name="them_loai" style="width: 100%;">Thêm Loại Sản Phẩm</button></td>

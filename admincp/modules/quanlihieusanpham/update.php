@@ -3,7 +3,6 @@
 <table border="1px" style="border-collapse:collapse;" class="quan-li">
     <tr>
         <td>Tên Hiệu</td>
-        <td>Tình Trạng</td>
     </tr>
 
     <?php
@@ -21,12 +20,6 @@
             <td>
             <input type="hidden" value="<?php echo $each['id_hieu']; ?>" name="ma_hieu">
                 <input type="text" value="<?php echo $each['ten_hieu']; ?>" name="hieu_san_pham">
-            </td>
-            <td>
-                <select name="tinh_trang" id="tinh_trang" style="width: 100%;">
-                    <option value="1">Kích Hoạt</option>
-                    <option value="0">Không Kích Hoạt</option>
-                </select>
             </td>
         </tr>
     <?php }?>

@@ -3,11 +3,11 @@ include('../config.php');
 
 $ten_loai = $_POST['loai_san_pham'];
 $ma_hieu = $_POST['ma_hieu'];
-$tinh_trang = $_POST['tinh_trang'];
+
 
 if (isset($_POST['them_loai'])) {
-    $sql = "insert into quanliloaisanpham(ten_loai, id_hieu, tinh_trang) values
-            ('$ten_loai', '$ma_hieu', $tinh_trang)
+    $sql = "insert into quanliloaisanpham(ten_loai, id_hieu) values
+            ('$ten_loai', '$ma_hieu')
         ";
 
     $rs = mysqli_query($conn, $sql);
@@ -20,7 +20,6 @@ if (isset($_POST['them_loai'])) {
     $sql = "update quanliloaisanpham set
         ten_loai = '$ten_loai',
         id_hieu = '$ma_hieu',
-        tinh_trang = $tinh_trang
         where id_loai = '$ma_loai'
     ";
 

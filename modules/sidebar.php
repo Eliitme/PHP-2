@@ -15,7 +15,7 @@
             <li>
                 <table style="border-spacing: 2px;">
                     <tr>
-                        <td rowspan="4"><img src="images/hotline.png" alt="" width="50px"></td>
+                        <td rowspan="4"><img src="/PHP 2/images/hotline.png" alt="" width="50px"></td>
                     </tr>
                     <tr>
                         <th>Lê Văn Long</th>    
@@ -32,7 +32,7 @@
             <li>
             <table style="border-spacing: 2px;">
                     <tr>
-                        <td rowspan="4"><img src="images/hotline.png" alt="" width="50px"></td>
+                        <td rowspan="4"><img src="/PHP 2/images/hotline.png" alt="" width="50px"></td>
                     </tr>
                     <tr>
                         <th>Lê Văn Long</th>    
@@ -49,7 +49,7 @@
             <li>
             <table style="border-spacing: 2px;">
                     <tr>
-                        <td rowspan="4"><img src="images/hotline.png" alt="" width="50px"></td>
+                        <td rowspan="4"><img src="/PHP 2/images/hotline.png" alt="" width="50px"></td>
                     </tr>
                     <tr>
                         <th>Lê Văn Long</th>    
@@ -74,7 +74,7 @@
 
                 while($each = mysqli_fetch_array($rs)){
                     ?>
-                    <li><a href="?manage=xem_san_pham&action=theo_hieu&hieu=<?php echo $each['id_hieu']?>"><?php echo $each['ten_hieu'] ?>(<?php echo $each['tong_san_pham'] ?>)</a></li>
+                    <li><a href="/PHP 2/index.php?manage=xem_san_pham&action=theo_hieu&hieu=<?php echo $each['id_hieu']?>"><?php echo $each['ten_hieu'] ?>(<?php echo $each['tong_san_pham'] ?>)</a></li>
                     <?php
                 }
             ?>

@@ -1,14 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    margin: auto;
-    padding: 0;
-}
+
 .dang-nhap{
     width: 600px;
-    padding: 14% 0 0;
+    padding: 5% 0 0;
     margin: auto;
 }
 .form {
