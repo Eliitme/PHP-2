@@ -19,7 +19,7 @@
             <?php
 
             $trang = 1; //khởi tạo trang ban đầu
-            $gioi_han = 2; //số bản ghi trên 1 trang (2 bản ghi trên 1 trang)
+            $gioi_han = 20; //số bản ghi trên 1 trang 
 
             $rs = mysqli_query($conn, "select count(id_bai_viet) as tong_bai_viet from quanlitintuc where tinh_trang = 1");
 

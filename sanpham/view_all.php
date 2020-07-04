@@ -39,7 +39,7 @@
                         <h3 id="gia-san-pham">Giá: <?php echo number_format($each['gia']) . " VNĐ" ?></h3>
                         <?php echo "<h3 style=\"margin-left: 5%; width: 45%; float: right; position: relative\">Chưa có thông tin thêm về sản phẩm</h3>"; ?>
                         <div id="mua-hang">
-                            <a href="">MUA SẢN PHẨM</a>
+                            <!-- <a href="">MUA SẢN PHẨM</a> -->
                             <a href="/PHP 2/shopping_cart/cart_update.php?ma_san_pham=<?php echo $each['id_san_pham'] ?>">THÊM VÀO GIỎ HÀNG</a>
                         </div>
                     </div>
@@ -67,7 +67,7 @@
                             } ?>
                         </div>
                         <div id="mua-hang">
-                            <a href="">MUA SẢN PHẨM</a>
+                            <!-- <a href="">MUA SẢN PHẨM</a> -->
                             <a href="/PHP 2/shopping_cart/cart_update.php?ma_san_pham=<?php echo $each['id_san_pham'] ?>">THÊM VÀO GIỎ HÀNG</a>
                         </div>
                         <div style="width: 100%; float: left;"></div>

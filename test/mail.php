@@ -5,22 +5,19 @@ ini_set('display_errors', 1);
 
 error_reporting(E_ALL);
 
-$ma_khach_hang = $_SESSION['dang-nhap'];
-$sql = mysqli_query($conn, "select email from quanlikhachhang where id_khach_hang = $ma_khach_hang");
 
-while ($each = mysqli_fetch_assoc($sql)) {
-    $from = "Laptop AL";
+$from = "Laptop AL";
 
-    $to = $each['email'];
+$to = "datt4bt0@gmail.com";
 
-    $subject = "[No Reply] THÔNG BÁO XÁC NHẬN ĐƠN HÀNG THÀNH CÔNG";
+$subject = "[No Reply] THÔNG BÁO XÁC NHẬN ĐƠN HÀNG THÀNH CÔNG";
 
-    $message = "ABC";
+$message = "ABC";
 
-    $headers = "From:" . $from;
+$headers = "From:" . $from;
 
-    mail($to, $subject, $message, $headers);
-}
+mail($to, $subject, $message, $headers);
+
 
 
 echo "The email message was sent.";

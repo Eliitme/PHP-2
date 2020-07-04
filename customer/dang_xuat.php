@@ -1,5 +1,5 @@
 <?php
 
 session_start();
-unset($_SESSION['dang-nhap']);
+session_destroy();
 header('location: /PHP 2/index.php');

@@ -1,16 +1,42 @@
-function validateFormUpdate() {
-  var vnf_regex = /((09|03|07|08|05)+([0-9]{8})\b)/g;
-  var mobile = document.getElementById("so_dien_thoai");
-  if (mobile != "") {
-    if (vnf_regex.test(mobile) == false) {
-      alert("Số điện thoại của bạn không đúng định dạng!");
+function formLogin(){
+  var x = document.getElementById("ten_dang_nhap").value;
+  var y = document.getElementById("mat_khau");
+
+  if(!x || !y){
+      alert("Không để trống tên đăng nhập hoặc mật khẩu");
       return false;
-    } else {
-      alert("Số điện thoại của bạn hợp lệ!");
-      return true;
-    }
-  } else {
-    alert("Bạn chưa điền số điện thoại!");
-    return false;
   }
+  return true;
+}
+
+function formRegister(){
+    var x = document.getElementById("ho_va_ten").value;
+    var y = document.getElementById("ten_dang_nhap").value;
+    var z = document.getElementById("mat_khau").value;
+    var t = document.getElementById("nhap_lai_mat_khau").value;
+
+    if(!x || !y || !z || !t){
+        alert("Không để trống trường hợp nào");
+        return false;
+    }
+
+    if(z != t){
+        alert("Nhập lại mật khẩu không chính xác!");
+        return false
+    }
+
+    return true;
+}
+
+function validateFormUpdate(){
+    var x = document.getElementById("ho_va_ten");
+    var y = document.getElementById("dia_chi");
+    var z = document.getElementById("so_dien_thoai");
+    var t = document.getElementById("email");
+
+    if(!x || !y || !z || !t){
+        alert("Không được để trống trường hợp nào");
+        return false;
+    }
+    return true;
 }
