@@ -19,7 +19,7 @@
             <?php
 
             $trang = 1; //khởi tạo trang ban đầu
-            $gioi_han = 20; //số bản ghi trên 1 trang 
+            $gioi_han = 6; //số bản ghi trên 1 trang 
 
             $rs = mysqli_query($conn, "select count(id_bai_viet) as tong_bai_viet from quanlitintuc where tinh_trang = 1");
 
@@ -45,18 +45,19 @@
             $rs  = mysqli_query($conn, $sql);
             while ($each = mysqli_fetch_array($rs)) {
             ?>
-                <div class="news-box" onclick="location.href='view_all.php?ma_tin_tuc=<?php echo $each['id_bai_viet'] ?>'" style="width: 50%; float: left;">
-                    <h1><?php echo $each['tieu_de']; ?></h1>
+                <div class="news-box" onclick="location.href='view_all.php?ma_tin_tuc=<?php echo $each['id_bai_viet'] ?>'" style="width: 47%; float: left; cursor: pointer; height: 550px; text-align: justify; margin: 15px;">
+                    <h2><?php echo $each['tieu_de']; ?></h2>
                     <figure>
                         <img src="../admincp/modules/quanlitintuc/<?php echo $each['anh_bai_viet']; ?>" alt="" width="400px">
-                        <figcaption><?php echo $each['tom_tat'] ?></figcaption>
+                        <figcaption style="margin: 0; width: 90%;"><?php echo $each['tom_tat'] ?></figcaption>
                     </figure>
                 </div>
             <?php
             }
             ?>
-            <div class="dem-trang" style="width: 100%; float: left; text-align: center;">
+            <div class="dem-trang" style="width: 100%; float: left; text-align: right;">
                 <ul style="list-style-type: none;">
+                    <li style="display: inline-flex;">Xem trang: </li>
                     <?php for ($i = 1; $i <= $tong_trang; $i++) {  ?>
                         <li style="display: inline;">
                             <?php if ($i == $trang) { ?>

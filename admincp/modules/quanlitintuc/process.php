@@ -2,7 +2,7 @@
 
 include('../config.php');
 
-$tieu_de = $_POST['tieu_de'];
+$tieu_de = addslashes($_POST['tieu_de']);
 $tom_tat = $_POST['tom_tat'];
 $chi_tiet = $_POST['chi_tiet'];
 $tinh_trang = $_POST['tinh_trang'];

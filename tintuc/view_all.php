@@ -23,7 +23,7 @@
             $rs  = mysqli_query($conn, $sql);
             while ($each = mysqli_fetch_array($rs)) {
             ?>
-                <div class="news">
+                <div class="news" style="text-align: justify;">
                     <h1><?php echo $each['tieu_de']; ?></h1>
                    <p><?php echo $each['chi_tiet'] ?></p>
                 </div>

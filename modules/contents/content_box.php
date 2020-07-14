@@ -44,8 +44,9 @@
 
         }
         ?>
-        <div class="dem-trang" style="width: 100%; float: left; text-align: center;">
+        <div class="dem-trang" style="width: 100%; float: left; text-align: right;">
         <ul style="list-style-type: none;">
+        <li style="display: inline-flex;">Xem trang:</li>
             <?php for ($i = 1; $i <= $tong_trang; $i++) {  ?>
                 <li style="display: inline;">
                     <?php if ($i == $trang) { ?>
@@ -89,7 +90,7 @@
         $rs  = mysqli_query($conn, $sql);
         while ($each = mysqli_fetch_array($rs)) {
         ?>
-            <div class="news-box-1" style="height: 200px; width: 49%; margin-left: 5px; border: 1px solid silver; font-size: 12px; float:left; text-align: justify; cursor: alias;" onclick="location.href='view_all.php?ma_tin_tuc=<?php echo $each['id_bai_viet'] ?>'" style="width: 50%; float: left;">
+            <div class="news-box-1" style="height: 200px; width: 49%; margin-left: 5px; border: 1px solid silver; font-size: 12px; float:left; text-align: justify; cursor: pointer;" onclick="location.href='view_all.php?ma_tin_tuc=<?php echo $each['id_bai_viet'] ?>'" style="width: 50%; float: left;">
                 <h1><?php echo $each['tieu_de']; ?></h1>
                 <figure>
                     <img src="/PHP 2/admincp/modules/quanlitintuc/<?php echo $each['anh_bai_viet']; ?>" alt="" width="128px">

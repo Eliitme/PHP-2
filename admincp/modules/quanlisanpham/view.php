@@ -24,8 +24,9 @@ if (isset($_GET["trang"])) {
 $vi_tri = ($trang - 1) * $gioi_han;
 
 ?>
-<div class="dem-trang" style="width: 100%; float: left; text-align: center;">
+<div class="dem-trang" style="width: 100%; float: left; text-align: right;">
     <ul style="list-style-type: none;">
+    <li style="display: inline-flex;">Xem trang</li>
         <?php for ($i = 1; $i <= $tong_trang; $i++) {  ?>
             <li style="display: inline;">
                 <?php if ($i == $trang) { ?>
@@ -51,7 +52,7 @@ $vi_tri = ($trang - 1) * $gioi_han;
     <?php
     $sql = "select id_san_pham, ten_san_pham, anh_san_pham, ten_hieu, ten_loai, gia, so_luong, quanlisanpham.tinh_trang
      from quanlisanpham join quanlihieusanpham on quanlihieusanpham.id_hieu = quanlisanpham.id_hieu
-     join quanliloaisanpham on quanliloaisanpham.id_loai = quanlisanpham.id_loai limit $vi_tri, $gioi_han";
+     join quanliloaisanpham on quanliloaisanpham.id_loai = quanlisanpham.id_loai order by id_san_pham desc limit $vi_tri, $gioi_han";
 
     $rs = mysqli_query($conn, $sql);
 

@@ -1,10 +1,12 @@
 <div class="lich-su">
+<h3>QUẢN LÍ ĐƠN HÀNG</h3>
     <table border=1px style="border-collapse: collapse; width: 100%;">
         <tr>
             <th>STT</th>
             <th>Khách Hàng</th>
             <th>Mã Đơn</th>
             <th>Thông Tin Đơn Hàng</th>
+            <th>Thông tin người nhận</th>
             <th>Ngày Đặt Đơn</th>
             <th>Ghi Chú</th>
             <th>Tình Trạng</th>
@@ -34,7 +36,7 @@
         //tính start (vị trí bản ghi sẽ bắt đầu lấy):
         $vi_tri = ($trang - 1) * $gioi_han;
 
-        $sql = "select id_hoa_don, id_khach_hang, ngay_dat_don, tinh_trang, ghi_chu from hoadon limit $vi_tri, $gioi_han";
+        $sql = "select id_hoa_don, id_khach_hang, nguoi_nhan, so_dien_thoai, dia_chi, ngay_dat_don, tinh_trang, ghi_chu from hoadon order by tinh_trang asc, id_hoa_don desc limit $vi_tri, $gioi_han";
 
         $rs = mysqli_query($conn, $sql);
 
@@ -89,6 +91,11 @@
                             <td colspan="2">Tổng đơn hàng: <?php echo number_format($tong_don_hang) ?></td>
                         </tr>
                     </table>
+                </td>
+                <td style="text-align: justify;">
+                    <p>Người nhận: <?php echo $each['nguoi_nhan']?></p>
+                    <p>Địa chỉ: <?php echo $each['dia_chi']?></p>
+                    <p>SĐT: <?php echo $each['so_dien_thoai']?></p>
                 </td>
                 <td><?php $ngay_dat_don = date_create($each['ngay_dat_don']);
                     echo date_format($ngay_dat_don, "d/m/Y") ?></td>

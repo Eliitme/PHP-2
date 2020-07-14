@@ -27,7 +27,7 @@ $vi_tri = ($trang - 1) * $gioi_han;
 
 <div class="product">
     <h3>DANH SÁCH SẢN PHẨM</h3>
-    <div class="dem-trang" style="width: 100%; float: left; text-align: center;">
+    <div class="dem-trang" style="width: 100%; float: left; text-align: right;">
         <ul style="list-style-type: none;">
             <?php for ($i = 1; $i <= $tong_trang; $i++) {  ?>
                 <li style="display: inline;">

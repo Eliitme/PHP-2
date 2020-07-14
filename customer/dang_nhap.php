@@ -10,5 +10,7 @@
             <br>
             <button type="submit" name="dang_nhap">Đăng nhập</button>
         </form>
+        <br>
+        <a href="/PHP%202/index.php?manage=khach_hang&action=dang_ki">Chưa có tài khoản, ĐĂNG KÍ NGAY!</a>
     </div>
 </div>
